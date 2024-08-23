@@ -24,7 +24,7 @@
         justify-content: space-between;
         align-items: center;
         background-color: white;
-        position: static;
+        position: sticky;
         top: 0;
     }
     nav .LeProfile{
@@ -52,12 +52,11 @@
     nav ul li{
         margin-left: 20 px;
         cursor: pointer;
-        border-bottom: 0.5px solid white;
+        border-bottom: 1px solid white;
+        margin: 10px;
     }
     nav ul li:hover{
-        margin-left: 20 px;
-        cursor: pointer;
-        border-bottom: 1px solid black;
+        border-bottom-color: black;
     }
 </style>
 <script>
@@ -72,13 +71,9 @@
         </div>
         <!-- ul>(a>li)*3 -->
         <ul>
-            <a href="">
-                <li>Mes Projet </li>
-            </a>
-            <a href="">
-                <li>Curriculum vitæ </li>
-            </a>
-            <li>About Me </li>
+            <li> Mes Projet </li>
+            <li> Curriculum vitæ </li>
+            <li> About Me </li>
         </ul>
          
 
