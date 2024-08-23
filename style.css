@@ -9,3 +9,45 @@ body{
     font-style: normal;
     font-variation-settings: "wdth" 100;
 }
+
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+nav .LeProfile{
+    display: flex;
+    align-items: center;
+    img{
+        width: 40px;
+        height: 40px;
+        border-radius: 40%;
+    }
+    h1{
+        margin-left: 10px;
+        font-size: 30px;
+    }
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+nav ul li{
+    margin-left: 20 px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    margin: 10px;
+}
+nav ul li:hover{
+    border-bottom-color: black;
+}
