@@ -44,16 +44,20 @@
     nav ul{
         display: flex;
         list-style-type: none;
-        li{
-            margin-left: 20 px;
-            cursor: pointer;
-            border-bottom: 0.5px solid white;
+        a{
+            text-decoration: none;
+            color: black;
         }
-        li:hover{
-            margin-left: 20 px;
-            cursor: pointer;
-            border-bottom: 1px solid black;
-        }
+    }
+    nav ul li{
+        margin-left: 20 px;
+        cursor: pointer;
+        border-bottom: 0.5px solid white;
+    }
+    nav ul li:hover{
+        margin-left: 20 px;
+        cursor: pointer;
+        border-bottom: 1px solid black;
     }
 </style>
 <script>
@@ -66,12 +70,21 @@
             <img src="https://avatars.githubusercontent.com/u/176900346?v=4" alt="L'image de profile">
             <h1>Raykesh</h1>
         </div>
-        ul>(a>li)*3 
+        <!-- ul>(a>li)*3 -->
+        <ul>
+            <a href="">
+                <li>Mes Projet </li>
+            </a>
+            <a href="">
+                <li>Curriculum vitæ </li>
+            </a>
+            <li>About Me </li>
+        </ul>
          
 
     </nav>
 
-    <h1>Raykesh</h1>
-    Bienvenue dans mon site 
+    <!-- <h1>Raykesh</h1>
+    Bienvenue dans mon site  -->
 </body>
 </html>
