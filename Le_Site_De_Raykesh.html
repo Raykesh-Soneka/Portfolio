@@ -57,6 +57,31 @@
         nav ul li:hover{
             border-bottom-color: black;
         }
+        @media screen and (max-width: 700px) {
+            nav{
+                justify-content: center;
+                ul{
+                    display: none;
+                }
+            }       
+        }
+
+        .section1_de_la_page{
+            margin: 4%;
+            header{
+                margin-top: 5%;
+                max-width: 80%;
+                h1{
+                    margin: 0;
+                    /* text-transform:none; */
+                    font-size: 3dvw;
+                }
+                p{
+                    line-height: 30px;
+                    color: #80808080;
+                }
+            }
+        }
     </style>
     <script>
         // A terme, il faudra le placer dans un fichier Js à part
@@ -78,8 +103,16 @@
          
 
     </nav>
+    <section class="section1_de_la_page">
+        <header>
 
-    <!-- <h1>Raykesh</h1>
-    Bienvenue dans mon site  -->
+            <h1>Bonjours,</h1>
+            <p>
+                Bienvenue dans mon site, ce site est un Portfolio réaliser par Raykesh. Vous êtes actuellement sur mon site. Il y a une barre de navigation
+                en haut avec des onglets qui feront une redirection. Si certaine fonctionalités ne marchent pas encore, c'est qu'elle sont en maintenance 
+                et seront disponible très bientôt donc patience.
+            </p>
+        </header>
+    </section>
 </body>
 </html>
