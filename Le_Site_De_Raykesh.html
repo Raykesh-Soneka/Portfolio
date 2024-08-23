@@ -16,6 +16,45 @@
         font-style: normal;
         font-variation-settings: "wdth" 100;
     }
+
+    nav{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        position: static;
+        top: 0;
+    }
+    nav .LeProfile{
+        display: flex;
+        align-items: center;
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 40%;
+        }
+        h1{
+            margin-left: 10px;
+            font-size: 30px;
+        }
+    }
+
+    nav ul{
+        display: flex;
+        list-style-type: none;
+        li{
+            margin-left: 20 px;
+            cursor: pointer;
+            border-bottom: 0.5px solid white;
+        }
+        li:hover{
+            margin-left: 20 px;
+            cursor: pointer;
+            border-bottom: 1px solid black;
+        }
+    }
 </style>
 <script>
     // A terme, il faudra le placer dans un fichier Js à part
