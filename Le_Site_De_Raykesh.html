@@ -88,6 +88,18 @@
                     color: #80808080;
                 }
             }
+            .imageNumeroUn{
+                margin-top: 5%;
+                img{
+                    transition: filter 0.5s;
+                    filter: brightness(50%);
+                    filter: blur(5px);
+                }
+                img:hover{
+                    filter: brightness(100%);
+                    filter: blur(0px);
+                }
+            }
         }
     </style>
     <script>
@@ -120,6 +132,9 @@
                 et seront disponible très bientôt donc patience.
             </p>
         </header>
+        <section class="imageNumeroUn">
+            <img src="https://www.kali.org/images/notebook-kali-2024.1.jpg" alt="image de présentation " width="100%">
+        </section>
     </section>
 </body>
 </html>
