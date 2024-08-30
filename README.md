@@ -11,7 +11,7 @@ Documentation :
 > [!NOTE]
 > Cette partie n'est sûrement pas encore MAJ.
 
-#### II. Fonctionalité implémenter à tester
+#### II. Fonctionalité qui sont implémenter et qui oeuvent être tester
 
 
 ```sh
