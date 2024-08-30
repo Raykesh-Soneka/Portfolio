@@ -56,7 +56,7 @@ nav .LeProfile{
         text-wrap: wrap;
         flex-wrap: wrap;
     }
-    footer .Colone{
+    footer .Colonne{
         width: 80%;
     }
 }
@@ -119,9 +119,10 @@ footer{
     color: azure;
     padding: 5px;
     padding-bottom: 10%;
-    .Colone{
+    .Colonne{
         a{
             text-decoration: none;
+            color: azure;
         }
         p{
             font-size: 12px;
@@ -138,3 +139,4 @@ footer{
 .footer-logo-kaliSVG{
     max-width:30%;
 }
+
