@@ -9,7 +9,7 @@ Documentation :
 ### I. Architecture Du site
 
 > [!NOTE]
-> Cette parti n'est sûrement pas encore MAJ.
+> Cette partie n'est sûrement pas encore MAJ.
 
 #### II. Fonctionalité implémenter à tester
 
