@@ -9,6 +9,7 @@ body{
     font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings: "wdth" 100;
+    scroll-behavior: smooth;
 }
 
 nav{
@@ -20,6 +21,10 @@ nav{
     background-color: white;
     position: sticky;
     top: 0;
+    margin-right: -2.1%;
+    margin-left: -2.1%;
+    padding-right: 2.1%;
+    padding-left: 2.1%;
 }
 nav .LeProfile{
     display: flex;
