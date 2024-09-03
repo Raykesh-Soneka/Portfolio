@@ -25,6 +25,7 @@ nav{
     margin-left: -2.1%;
     padding-right: 2.1%;
     padding-left: 2.1%;
+    z-index: 10;
 }
 nav .LeProfile{
     display: flex;
@@ -48,6 +49,7 @@ nav .LeProfile{
         ul{
             display: none;
         }
+        z-index: 10;
     }       
     .section1_de_la_page{
         margin: 5%;
