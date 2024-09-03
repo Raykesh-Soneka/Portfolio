@@ -41,6 +41,20 @@ nav .LeProfile{
     }
 }
 
+.section1_de_la_page .colonne2Div{
+    .LesColone{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .item{
+            max-width: 195px;
+            margin-right: 20px;
+            h4{
+                margin: 0;
+            }
+        }
+    }
+}
 
 
 @media screen and (max-width: 700px) {
