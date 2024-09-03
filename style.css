@@ -65,6 +65,16 @@ nav .LeProfile{
             display: none;
         }
         z-index: 10;
+        .LeProfile{
+            img{
+                width: min(10dvw,10dvh);
+                height: min(10dvw,10dvh);
+            }
+            h1{
+                margin-left: min(2dvw,2dvh);
+                font-size: min(6dvw,6dvh);
+            }
+        }
     }       
     .section1_de_la_page{
         margin: 5%;
