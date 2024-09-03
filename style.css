@@ -49,6 +49,7 @@ nav .LeProfile{
         ul{
             display: none;
         }
+        z-index: 10;
     }       
     .section1_de_la_page{
         margin: 5%;
