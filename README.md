@@ -8,6 +8,13 @@ Documentation :
 
 ### I. Architecture Du site
 
+Page Principale 
+- Le site est composé de 3 sections : Header, Main et Footer.
+- Le Header contient le logo du site et un bouton de navigation vers la page principale
+- Le Main contient les informations du site et les liens vers les autres pages du site.
+- Le Footer contient les informations de contact, les liens vers les réseaux sociaux et les autre pages du site
+
+
 > [!NOTE]
 > Cette partie n'est sûrement pas encore MAJ.
 
@@ -19,6 +26,17 @@ $ ls -R -a
 ```
 Footer :octocat: :neckbeard: :bowtie: :shipit:
 
-Code : Explication / démonstration 
+## Code : Explication / démonstration 
 -----------------------------
 
+### HTML
+
+le html est basic avec des classes ( pas de css intégré )
+
+### CSS
+
+Le CSS est dans un fichier à part et dispose d'une partie réactive.
+
+### JS
+
+Le JS est à l'heure actuelle dans une balise script
