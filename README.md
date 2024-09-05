@@ -31,7 +31,16 @@ Footer :octocat: :neckbeard: :bowtie: :shipit:
 
 ### HTML
 
-le html est basic avec des classes ( pas de css intégré )
+le html est basic avec des classes ( pas de css intégré ).
+Le code à aussi des ra
+```html
+<!-- ul>(a>li)*3 -->
+<ul>...
+<!-- div.item*5 -->
+...<div class="item">
+<!-- .Colonne*3>h3+p*3 -->
+...<div class="Colonne">
+```
 
 ### CSS
 
