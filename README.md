@@ -35,8 +35,13 @@ le html est basic avec des classes ( pas de css intégré )
 
 ### CSS
 
-Le CSS est dans un fichier à part et dispose d'une partie réactive.
+Le CSS est dans un fichier à part et dispose d'une partie réactive. Le `z-index` permet de corriger le bug de l'element nav qui passe en dessous de l'image.
+
 
 ### JS
 
 Le JS est à l'heure actuelle dans une balise script
+
+### Déploiment
+
+Le Déploiment est un déploiment standard sur GitHub avec GitHub Pages suivi d'une redirection d'URL automatique grâce à `window.location.replace("")`.
