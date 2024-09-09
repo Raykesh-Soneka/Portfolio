@@ -59,5 +59,6 @@ Le Déploiment est un déploiment standard sur GitHub avec GitHub Pages suivi d'
 <summary>:eyes: Montrer les Statistiques GitHub de Raykesh : </summary>
 
 ![Raykesh GitHub stats](https://github-readme-stats.vercel.app/api?username=Raykesh-Soneka\&show_icons=true\&bg_color=00000000\&locale=fr)
+![Raykesh GitHub stats](https://github-readme-stats.vercel.app/api?username=Raykesh\&show_icons=true\&bg_color=00000000\&locale=fr)
 
 </details>
