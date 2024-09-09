@@ -1,7 +1,7 @@
 # Portfolio
 Mon Portfolio
 
-Le site est accessible via ce [Lien ](https://raykesh-soneka.github.io/Portfolio/Le_Site_De_Raykesh)
+Le site est accessible via ce [Lien qui fait une Redirection d'URL vers mon site](https://raykesh-soneka.github.io/Portfolio/Le_Site_De_Raykesh)
 
 Documentation : 
 ==========
@@ -29,7 +29,7 @@ Footer :octocat: :neckbeard: :bowtie: :shipit:
 ## Code : Explication / démonstration 
 -----------------------------
 
-### HTML
+### HTML [![My Skills](https://skillicons.dev/icons?i=html)](https://skillicons.dev)
 
 le html est basic avec des classes ( pas de css intégré ).
 Le code à aussi des raccourcis
@@ -42,12 +42,12 @@ Le code à aussi des raccourcis
 ...<div class="Colonne">
 ```
 
-### CSS
+### CSS [![My Skills](https://skillicons.dev/icons?i=css)](https://skillicons.dev)
 
 Le CSS est dans un fichier à part et dispose d'une partie réactive. Le `z-index` permet de corriger le bug de l'element nav qui passe en dessous de l'image.
 
 
-### JS
+### JS [![My Skills](https://skillicons.dev/icons?i=js)](https://skillicons.dev)
 
 Le JS est à l'heure actuelle dans une balise script
 
