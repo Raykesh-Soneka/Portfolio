@@ -54,3 +54,10 @@ Le JS est à l'heure actuelle dans une balise script
 ### Déploiment
 
 Le Déploiment est un déploiment standard sur GitHub avec GitHub Pages suivi d'une redirection d'URL automatique grâce à `window.location.replace("")`.
+
+<details>
+<summary>:eyes: Show github Stat : </summary>
+
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Raykesh-Soneka\&show_icons=true\&bg_color=00000000)
+
+</details>
