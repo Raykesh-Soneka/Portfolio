@@ -58,6 +58,6 @@ Le Déploiment est un déploiment standard sur GitHub avec GitHub Pages suivi d'
 <details>
 <summary>:eyes: Show github Stat : </summary>
 
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Raykesh-Soneka\&show_icons=true\&bg_color=00000000)
+![Raykesh GitHub stats](https://github-readme-stats.vercel.app/api?username=Raykesh-Soneka\&show_icons=true\&bg_color=00000000\&locale=fr)
 
 </details>
