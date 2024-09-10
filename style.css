@@ -53,6 +53,13 @@ nav .LeProfile{
             h4{
                 margin: 0;
             }
+            a{
+                text-decoration: none;
+                color: black;
+                /* cursor: zoom-in; */
+                cursor: nwse-resize;
+                cursor: url(images/SnK\ Blade.cur),auto;
+            }
         }
     }
 }
