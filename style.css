@@ -59,6 +59,10 @@ nav .LeProfile{
                 /* cursor: zoom-in; */
                 cursor: nwse-resize;
                 cursor: url(images/SnK\ Blade.cur),auto;
+                background-color: blanchedalmond;
+                border-radius: 10px;
+                padding: 5px;
+                border: dotted blue 1px;
             }
         }
     }
