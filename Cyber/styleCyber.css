@@ -9,3 +9,31 @@ body{
     background-color: none;
 }
 
+nav ul{
+    display: flex;
+    list-style-type: none;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+nav ul li{
+    margin-left: 20 px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    margin: 10px;
+}
+nav ul li:hover{
+    border-bottom-color: black;
+}
+
+
+@media screen and (max-width: 700px) {
+    nav{
+        justify-content: center;
+        ul{
+            font-size: 0.5em;
+        }
+    }    
+}
+
