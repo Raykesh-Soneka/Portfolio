@@ -19,7 +19,22 @@
         document.title  = " |" + page + "| Raykesh: Bienvenue dans mon protfolio. ";
         console.log(" Le titre de la page est : " + document.title);
         console.log( page );
-        // window.location.replace("https://raykesh-soneka.github.io/Portfolio/Le_Site_De_Raykesh");
+        const delay = ms => new Promise(res => setTimeout(res, ms));
+        const MaFonctionQuiAttend = async () => {
+            await delay(1000);
+            console.log("Waited 1s");
+            await delay(1000);
+            console.log("Waited 2s");
+            await delay(1000);
+            console.log("Waited 3s");
+            await delay(1000);
+            console.log("Waited 4s");
+            await delay(1000);
+            console.log("Waited 5s");
+            window.location.replace("../Le_Site_De_Raykesh.html");
+        };
+        MaFonctionQuiAttend()
+        
     </script>
 </head>
 <body>
@@ -31,8 +46,8 @@
         <!-- ul>(a>li)*3 -->
         <ul>
             <a href="../Le_Site_De_Raykesh.html"    rel="noopener noreferrer" ><li> Home      </li></a>
-            <a href="Cyber\Blue Team\BlueTeam.html" rel="noopener noreferrer" ><li> Blue Team </li></a>
-            <a href= "Cyber\Red Team\RedTeam.html"  rel="noopener noreferrer" ><li> Red  Team </li></a>
+            <a href="Blue Team\BlueTeam.html" rel="noopener noreferrer" ><li> Blue Team </li></a>
+            <a href= "Red Team\RedTeam.html"  rel="noopener noreferrer" ><li> Red  Team </li></a>
             <a href= "Cyber.html"                   rel="noopener noreferrer" ><li>   Cyber   </li></a>
         </ul>
          
