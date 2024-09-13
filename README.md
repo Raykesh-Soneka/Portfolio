@@ -63,8 +63,8 @@ Le JS est à l'heure actuelle dans une balise script
 ```JS
 var path = window.location.pathname;  // Le chemin actuel de la page
 var page = path.split("/").pop();   // Le nom de la page actuelle
-document.title  = " |" + page + "| Raykesh: Bienvenue dans mon protfolio. ";  // Le titre de la page
-console.log(" Le titre de la page est : " + document.title);   // Affiche le titre de la page dans la console
+document.title  = " |" + page + "| Raykesh: Bienvenue dans mon protfolio.";//Le titre de la page
+console.log(" Le titre de la page est : " + document.title);// Affiche le titre dans la console
 console.log( page );   // Affiche le nom de la page actuelle dans la console
 
 ```
