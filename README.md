@@ -45,12 +45,28 @@ Le code à aussi des raccourcis
 ### CSS [![My Skills](https://skillicons.dev/icons?i=css)](https://skillicons.dev)
 
 Le CSS est dans un fichier à part et dispose d'une partie réactive. Le `z-index` permet de corriger le bug de l'element nav qui passe en dessous de l'image.
+```CSS
+@import '../style.css';  
+/* Style css de base ↑ */
+/* Style css override/surcharger ↓ */
 
+body{
+    background-color: none;
+} 
+
+```
 
 ### JS [![My Skills](https://skillicons.dev/icons?i=js)](https://skillicons.dev)
 
 Le JS est à l'heure actuelle dans une balise script
+```JS
+var path = window.location.pathname;  // Le chemin actuel de la page
+var page = path.split("/").pop();   // Le nom de la page actuelle
+document.title  = " |" + page + "| Raykesh: Bienvenue dans mon protfolio. ";  // Le titre de la page
+console.log(" Le titre de la page est : " + document.title);   // Affiche le titre de la page dans la console
+console.log( page );   // Affiche le nom de la page actuelle dans la console
 
+```
 ### Déploiment
 
 Le Déploiment est un déploiment standard sur GitHub avec GitHub Pages suivi d'une redirection d'URL automatique grâce à `window.location.replace("")`.
