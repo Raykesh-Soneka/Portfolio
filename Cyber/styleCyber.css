@@ -7,11 +7,11 @@
 
 body{
     /* background-color: none; */
-    --main-bg-color:#ffffff;
-    --cross-color:#999;
-    --ligne-color-R:0;  /* var(--ligne-color-R) */
-    --ligne-color-G:0;  /* var(--ligne-color-G) */
-    --ligne-color-B:0;  /* var(--ligne-color-B) */
+    --main-bg-color:#000;
+    --cross-color:#666;
+    --ligne-color-R:255;  /* var(--ligne-color-R) */
+    --ligne-color-G:255;  /* var(--ligne-color-G) */
+    --ligne-color-B:255;  /* var(--ligne-color-B) */
     background:
         linear-gradient(-90deg, rgba(var(--ligne-color-R),var(--ligne-color-G),var(--ligne-color-B),.03) 1px, transparent 1px),
         linear-gradient(rgba(var(--ligne-color-R),var(--ligne-color-G),var(--ligne-color-B),.03) 1px, transparent 1px), 
@@ -61,3 +61,7 @@ nav ul li:hover{
     }    
 }
 
+.fin{
+    background-image: linear-gradient( #00000000 10%, #000000FF 90%);
+    height: 50px;
+}
