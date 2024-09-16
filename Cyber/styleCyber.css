@@ -64,4 +64,5 @@ nav ul li:hover{
 .fin{
     background-image: linear-gradient( #00000000 10%, #000000FF 90%);
     height: 50px;
+    margin: 0;
 }
