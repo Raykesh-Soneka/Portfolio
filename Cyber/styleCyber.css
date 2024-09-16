@@ -6,7 +6,31 @@
 /* Style css override/surcharger ↓ */
 
 body{
-    background-color: none;
+    /* background-color: none; */
+    --main-bg-color:#ffffff;
+    --cross-color:#999;
+    --ligne-color-R:0;  /* var(--ligne-color-R) */
+    --ligne-color-G:0;  /* var(--ligne-color-G) */
+    --ligne-color-B:0;  /* var(--ligne-color-B) */
+    background:
+        linear-gradient(-90deg, rgba(var(--ligne-color-R),var(--ligne-color-G),var(--ligne-color-B),.03) 1px, transparent 1px),
+        linear-gradient(rgba(var(--ligne-color-R),var(--ligne-color-G),var(--ligne-color-B),.03) 1px, transparent 1px), 
+        linear-gradient(-90deg, rgba(var(--ligne-color-R),var(--ligne-color-G),var(--ligne-color-B), .02) 1px, transparent 1px),
+        linear-gradient(rgba(var(--ligne-color-R),var(--ligne-color-G),var(--ligne-color-B),.02) 1px, transparent 1px),
+        linear-gradient(transparent 3px, var(--main-bg-color) 3px, var(--main-bg-color) 78px, transparent 78px),
+        linear-gradient(-90deg, var(--cross-color) 1px, transparent 1px),
+        linear-gradient(-90deg, transparent 3px, var(--main-bg-color) 3px, var(--main-bg-color) 78px, transparent 78px),
+        linear-gradient(var(--cross-color) 1px, transparent 1px),
+        var(--main-bg-color);
+    background-size:
+        8px 8px,
+        8px 8px,
+        80px 80px,
+        80px 80px,
+        80px 80px,
+        80px 80px,
+        80px 80px,
+        80px 80px;
 }
 
 nav ul{
