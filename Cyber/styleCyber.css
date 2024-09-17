@@ -120,8 +120,7 @@ nav ul li:hover{
         content: '';
     }
     
-    summary::before,
-    summary::after {
+    summary::before,summary::after {
         width: .75em;
         height: 0;
         border-bottom: 2px solid;
@@ -129,6 +128,7 @@ nav ul li:hover{
         top: calc(50% - 1px);
         right: 0;
         transform: translateY(-50%);
+        transition: 200ms;
     }
     
     summary::after {
@@ -138,6 +138,15 @@ nav ul li:hover{
     
     [open] summary::after {
         transform: rotate(0deg);
+    }
+    details {
+        border-radius: 0.5rem;
+        margin: 1rem;
+        transition: 50ms;
+    }
+
+    details[open] {
+        padding-bottom: 1em;
     }
 }
 
