@@ -63,7 +63,17 @@ nav ul li{
 nav ul li:hover{
     border-bottom-color: white;
 }
-
+.section1_de_la_page{
+    margin: 4%;
+    header{
+        margin-top: 5%;
+        max-width: 80%;
+        p{
+            line-height: 30px;
+            color: #cfcfcfcF;
+        }
+    }
+}
 
 @media screen and (max-width: 700px) {
     nav{
