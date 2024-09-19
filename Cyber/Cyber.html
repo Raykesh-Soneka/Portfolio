@@ -23,8 +23,17 @@
 
         console.log("La page précédente ?");
         // CodeColorSyntaxHighlightR(document.getElementById("CodeKaliZsh"), "zsh");
-        
+
+        function urlPrecedente(n, s) {
+            n = n || 'url_prev';
+            s = s || sessionStorage;
+            var p = s.getItem(n);
+            p = p ? p : '';
+            s.setItem(n, location.href);
+            return p;
+        }
         // var pagePrecedente = history.back(); va à la page précedente
+        var pagePrecedente = urlPrecedente();
         console.log("La page précédente est : " + pagePrecedente);
         
     </script>
