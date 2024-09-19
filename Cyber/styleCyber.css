@@ -148,6 +148,35 @@ nav ul li:hover{
     details[open] {
         padding-bottom: 1em;
     }
+
+    .pre{
+        display: block;
+        unicode-bidi: embed;
+        font-family: monospace;
+        white-space: pre;
+        .Option{
+            color: green;
+            .OneLetterOption{
+                color: greenyellow;
+            }
+        }
+        .OneLetterOption{
+            color: rgb(153, 255, 20);
+        }
+        .descriptionOption{
+            color:aqua;
+        }
+        .Utilisation{
+            color:aquamarine;
+        }
+        .Exemple{
+            color:darkcyan;
+        }
+        .fichier{
+            color: yellow;
+        }
+    }
+
 }
 
 @media screen and (max-width: 700px) {

@@ -71,7 +71,7 @@
         ls
         ```
          -->
-        <div id="CodeKaliZsh">
+
 
 <pre><code >
 ls
@@ -80,6 +80,7 @@ ls
 <pre style="font-family:monospace;color: rgb(201, 209, 217); background-color: rgb(13, 17, 23); font-weight: 400; ">
 <ol style="padding-left: 3em;"><li>ls</li></ol></pre>
 Permet de voir le contenu (<strong style="font-size: 1.5em;">l</strong>i<strong style="font-size: 1.5em;">s</strong>ter) du dossier/répertoire courant 
+<!-- 
 <pre>
 
     Option utile : 
@@ -94,9 +95,27 @@ Permet de voir le contenu (<strong style="font-size: 1.5em;">l</strong>i<strong 
         ls ..
         ls
         ls / -R -a
-</pre>
-
-        </div>
+</pre> 
+-->
+<div class="pre">
+    
+    Option utile : 
+    <code class="Option"><span class="OneLetterOption">-a,</span> --all</code>              : <span class="descriptionOption">pour affichez tout (notament les fichiers cachées)</span>
+    <code class="Option"><span class="OneLetterOption">-A,</span> --almost-all</code>       : <span class="descriptionOption">pour presque affichez tout (notament les fichiers cachées sans affichez . et .. qui représent respactivement le répertoire courant et le répertoire parent )</span>
+    <code class="Option"><span class="OneLetterOption">-A,</span> --help</code>             : <span class="descriptionOption">pour affichez la documentation de base de la commande</span>
+    <code class="Option"><span class="OneLetterOption">-R,</span> --recursive</code>        : <span class="descriptionOption">pour affichez récursivement le contenu du répertoire courant et des sous-répertoires</span>
+    <code class="Option"><span class="OneLetterOption">-s,</span> --size</code>             : <span class="descriptionOption">pour affichez la taille des fichier</span>
+    <span class="Utilisation">Utilisation</span> : ls <div class="Option">[<span class="OneLetterOption">O</span>PTION]...</div> [<span class="fichier">FICHIER</span>]...
+    <span class="Exemple">Example</span> :
+    Le fichier peut être un répertoire :
+        ls <span class="fichier">..</span>
+        ls
+        <strong><span style="color: red;">sl</span></strong><!-- Ne pas condondre avec cette commande -->
+        ls <span class="fichier">/</span> <span class="OneLetterOption">-R</span> <span class="OneLetterOption">-a</span>
+        ls <span class="fichier">.</span> <span class="OneLetterOption">-a</span>
+        ls <span class="OneLetterOption">-a</span> <span class="fichier">.</span>
+    
+</div>
 
         <h3 id="Item2">Item 2</h3>    
         <h3 id="Item3">Item 3</h3>    
