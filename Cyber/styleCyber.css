@@ -143,6 +143,7 @@ nav ul li:hover{
         border-radius: 0.5rem;
         margin: 1rem;
         transition: 50ms;
+        cursor: progress;
     }
 
     details[open] {
