@@ -154,6 +154,7 @@ nav ul li:hover{
         unicode-bidi: embed;
         font-family: monospace;
         white-space: pre;
+        cursor: url(../images/SnK\ Blade.cur),auto;
         .Option{
             color: green;
             .OneLetterOption{
@@ -175,6 +176,7 @@ nav ul li:hover{
         .fichier{
             color: yellow;
         }
+        .helpDoc{cursor: url(../images/Luffy\ Help.cur),auto;}
     }
 
 }
