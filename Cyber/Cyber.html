@@ -52,7 +52,8 @@
                 console.log("https://raykesh-soneka.github.io/Portfolio/AboutMe.html");
                 console.log((pageRacine+"/AboutMe.html"));
                 const delay = ms => new Promise(res => setTimeout(res, ms));
-                const MaFonctionQuiAttend = async () => {
+                // const MaFonctionQuiAttend = async () => {
+                async function MaFonctionQuiAttend() {
                     await delay(1000);
                     console.log("Waited 1s");
                     await delay(1000);
@@ -65,8 +66,8 @@
                     console.log("Waited 5s");
                     window.location.replace("../Le_Site_De_Raykesh.html");
                 };
-                MaFonctionQuiAttend()
-            }else{window.location.replace("../Le_Site_De_Raykesh.html");}
+                MaFonctionQuiAttend();
+            }else{window.location.replace("../AboutMe.html");}
         }
         console.log("Fin");
     </script>
