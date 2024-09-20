@@ -144,8 +144,48 @@
     function hashInput() {
       const input = document.getElementById("input").value;
       const hash = utf8StringToSha256Hash(input);
+      var hashTest = hash
+
+      const originalStr = 'Hello, World! Test';
+      const key = '${hashTest}';
+      const encryptedStr = xorEncrypt(originalStr, key);
+      console.log(encryptedStr); // Output: a encrypted string
+      document.getElementById("output2").innerHTML = `Encrypt : ${encryptedStr}`;
+
+
+      // To decrypt, simply call the function again with the same key
+      const decryptedStr = xorEncrypt(encryptedStr, key);
+      console.log(decryptedStr); // Output: a decrypted string
+      document.getElementById("output3").innerHTML = `Decrypt : ${decryptedStr}`;
+
+
       document.getElementById("output").innerHTML = `SHA-256 Hash: ${hash}`;
     }
+  </script>
+
+  <h1>Xor : </h1>
+  Encrypt : 
+  <div id="output2"></div>
+  Decrypt : 
+  <div id="output3"></div>
+  <script>
+    function xorEncrypt(str, key) {
+      let encryptedStr = '';
+      for (let i = 0; i < str.length; i++) {
+        encryptedStr += String.fromCharCode(str.charCodeAt(i) ^ key.charCodeAt(i % key.length));
+      }
+      return encryptedStr;
+    }
+
+    // //Test
+    // const originalStr = 'Hello, World!';
+    // const key = 'mySecretKey';
+    // const encryptedStr = xorEncrypt(originalStr, key);
+    // console.log(encryptedStr); // Output: a encrypted string
+
+    // // To decrypt, simply call the function again with the same key
+    // const decryptedStr = xorEncrypt(encryptedStr, key);
+    // console.log(decryptedStr); // Output: 'Hello, World!'
   </script>
 </body>
 </html>
