@@ -37,6 +37,7 @@
         var path= "/Cyber/Cyber.html"
         var pageRacine = pageActuelle.substring(0, pageActuelle.length-path.length);
         var debug = true;
+        var debug = false;
         console.log("La page précédente est : " + pagePrecedente);
         console.log("La page actuelle est   : " + pageActuelle  );
         console.log("La page Racine est     : " + pageRacine    );
@@ -68,10 +69,10 @@
                     console.log("Waited 4s");
                     await delay(1000);
                     console.log("Waited 5s");
-                    window.location.replace("../Le_Site_De_Raykesh.html");
+                    window.location.replace("../AboutMe.html");AboutMe
                 };
                 MaFonctionQuiAttend();
-            }else{window.location.replace("../AboutMe.html");}
+            }else{window.location.replace("../Le_Site_De_Raykesh.html");}
         }
         console.log("Fin");
     </script>
