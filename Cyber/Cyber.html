@@ -123,7 +123,7 @@
         ```
          -->
 
-
+<br><br><br><br><br>
 <!-- <pre><code >
 ls
 </code></pre> -->
@@ -148,7 +148,7 @@ Permet de voir le contenu (<strong style="font-size: 1.5em;">l</strong><span sty
         ls / -R -a
 </pre> 
 -->
-<div class="pre">
+<div class="pre" title=" Commande : ls">
     
     Option utile : 
     <code class="Option"><span class="OneLetterOption">-a,</span> --all</code>              : <span class="descriptionOption">pour affichez tout (notament les fichiers cachées)</span>
@@ -158,38 +158,38 @@ Permet de voir le contenu (<strong style="font-size: 1.5em;">l</strong><span sty
     <code class="Option"><span class="OneLetterOption">-s,</span> --size</code>             : <span class="descriptionOption">pour affichez la taille des fichier</span>
     <span class="Utilisation">Utilisation</span> : ls <span class="Option">[<span class="OneLetterOption">O</span>PTION]...</span> [<span class="fichier">FICHIER</span>]...
     <span class="Exemple">Example</span> : 
-    Le fichier peut être un répertoire : 
-        ls <span class="fichier">..</span>
-        ls
-        <strong><span style="color: red;">sl</span></strong><!-- Ne pas condondre avec cette commande -->
-        ls <span class="fichier">/</span> <span class="OneLetterOption">-R</span> <span class="OneLetterOption">-a</span>
-        ls <span class="fichier">.</span> <span class="OneLetterOption">-a</span>
-        ls <span class="OneLetterOption">-a</span> <span class="fichier">.</span>
-    <strong><span style="color: red;">A</strong><span style="color: #ff8080">t</span><span style="color: #ffbf80">t</span><span style="color: #ffff80">e</span><span style="color: #c0ff80">n</span><span style="color: #80ff80">t</span><span style="color: #80ffff">i</span><span style="color: #8080ff">o</span><span style="color: #c680ff">n</span></span> : <span class="descriptionOption">Ne pas condondre avec <strong><span style="color: red;">sl</span></strong> qui est une autre commande</span>
+        Le fichier peut être un répertoire : 
+            ls <span class="fichier">..</span>
+            ls
+            <strong><span style="color: red;">sl</span></strong><!-- Ne pas condondre avec cette commande -->
+            ls <span class="fichier">/</span> <span class="OneLetterOption">-R</span> <span class="OneLetterOption">-a</span>
+            ls <span class="fichier">.</span> <span class="OneLetterOption">-a</span>
+            ls <span class="OneLetterOption">-a</span> <span class="fichier">.</span>
+        <strong><span style="color: red;">A</strong><span style="color: #ff8080">t</span><span style="color: #ffbf80">t</span><span style="color: #ffff80">e</span><span style="color: #c0ff80">n</span><span style="color: #80ff80">t</span><span style="color: #80ffff">i</span><span style="color: #8080ff">o</span><span style="color: #c680ff">n</span></span> : <span class="descriptionOption">Ne pas condondre avec <strong><span style="color: red;">sl</span></strong> qui est une autre commande</span>
     <span class="helpDoc"><span style="color: #ff0000">V</span><span style="color: #ff7f00">o</span><span style="color: #ff9200">i</span><span style="color: #00ff00">r</span><span style="color: #00ffff"> </span><span style="color: #0000ff">a</span><span style="color: #8b00ff">u</span><span style="color: #ff0000">s</span><span style="color: #ff7f00">s</span><span style="color: #ffa900">i</span><span style="color: #00ff00"> </span><span style="color: #3c00ff">:</span><span style="color: #0000ff"> </span><span style="color: gold;"> ls <span class="Option"><span class="OneLetterOption">--</span>help</span></span></span>
 </div>
 
-
+<br><br><br><br><br>
 
 <pre style="font-family:monospace;color: rgb(201, 209, 217); background-color: rgb(13, 17, 23); font-weight: 400; ">
 <ol style="padding-left: 3em;" start="1"><li>nmap</li></ol></pre>
 Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span style="font-size: 0.5em;">etwork </span><strong style="font-size: 1.5em;">Map</strong><span style="font-size: 0.5em;">per</span>) et les services ainsi que l'OS.
-<div class="pre">
+<div class="pre" title=" Commande : nmap">
     
     Option utile : 
     <code class="Option"><span class="OneLetterOption">-p,</span>      </code>              : <span class="descriptionOption">Spécifié le port ou la plage des ports</span>
     <code class="Option"><span class="OneLetterOption">-v,</span> -vv</code>                : <span class="descriptionOption">pour affichez (-vv: encore) plus d'étapes</span>
-    <code class="Option helpDoc"><span class="OneLetterOption">-h,</span>  ,  --help</code>        : <span class="descriptionOption">pour affichez la documentation de base de la commande</span>
+    <code class="Option helpDoc"><span class="OneLetterOption">-h,</span>  ,  --help</code>         : <span class="descriptionOption">pour affichez la documentation de base de la commande</span>
     <code class="Option"><span class="OneLetterOption">-R,</span> --recursive</code>        : <span class="descriptionOption">pour affichez récursivement le contenu du répertoire courant et des sous-répertoires</span>
     <code class="Option"><span class="OneLetterOption">-s,</span> --size</code>             : <span class="descriptionOption">pour affichez la taille des fichier</span>
     <span class="Utilisation">Utilisation</span> : <span style="color: salmon;">nmap</span> [<span class="fichier">Scan Type(s)</span>] <span class="Option">[<span class="OneLetterOption">O</span>PTION]...</span> {<span style="color:tomato;">target specification</span>} 
     <span class="Exemple">Example</span> : 
-    Attention, à utiliser à vos risques et périls : 
-        <span style="color: salmon;">nmap</span>                        |<span style="color: red;">( <strong>Montre la documentation</strong> )</span>
-        <span style="color: salmon;">nmap</span> <span style="color:tomato;">127.0.0.1</span> <span class="OneLetterOption">-A</span> <span class="OneLetterOption">-v</span>
-        <span style="color: salmon;">nmap</span> <span class="Option">--vv</span> <span class="fichier">-sL</span> <span style="color:tomato;">127.0.0.1</span>
-        <span style="color: salmon;">nmap</span> <span style="color:tomato;">127.0.0.1</span> <span class="Option"><span class="OneLetterOption">-p</span>1234</span> <span class="OneLetterOption">-A</span><span class="OneLetterOption">-v</span>
-        <span style="color: salmon;">nmap</span> <span style="color:tomato;">127.0.0.1</span> <span class="Option"><span class="OneLetterOption">-p</span>0-10000</span> <span class="OneLetterOption">-A</span><span class="OneLetterOption">-v</span>
+        Attention, à utiliser à vos risques et périls : 
+            <span style="color: salmon;">nmap</span>                        |<span style="color: red;">( <strong>Montre la documentation</strong> )</span>
+            <span style="color: salmon;">nmap</span> <span style="color:tomato;">127.0.0.1</span> <span class="OneLetterOption">-A</span> <span class="OneLetterOption">-v</span>
+            <span style="color: salmon;">nmap</span> <span class="Option">--vv</span> <span class="fichier">-sL</span> <span style="color:tomato;">127.0.0.1</span>
+            <span style="color: salmon;">nmap</span> <span style="color:tomato;">127.0.0.1</span> <span class="Option"><span class="OneLetterOption">-p</span>1234</span> <span class="OneLetterOption">-A</span><span class="OneLetterOption">-v</span>
+            <span style="color: salmon;">nmap</span> <span style="color:tomato;">127.0.0.1</span> <span class="Option"><span class="OneLetterOption">-p</span>0-10000</span> <span class="OneLetterOption">-A</span><span class="OneLetterOption">-v</span>
     <span class="helpDoc"><span style="color: #ff0000">V</span><span style="color: #ff7f00">o</span><span style="color: #ff9200">i</span><span style="color: #00ff00">r</span><span style="color: #00ffff"> </span><span style="color: #0000ff">a</span><span style="color: #8b00ff">u</span><span style="color: #ff0000">s</span><span style="color: #ff7f00">s</span><span style="color: #ffa900">i</span><span style="color: #00ff00"> </span><span style="color: #3c00ff">:</span><span style="color: #0000ff"> </span><span style="color: gold;"> nmap <span class="Option"><span class="OneLetterOption">-h</span></span></span></span>
 </div>
 <!-- TODO crawler, john, yes, cat, kex, neofetch, sudo apt,... -->
