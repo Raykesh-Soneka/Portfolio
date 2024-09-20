@@ -23,7 +23,7 @@
 
         console.log("La page précédente ?");
         // CodeColorSyntaxHighlightR(document.getElementById("CodeKaliZsh"), "zsh");
-
+        
         function urlPrecedente(n, s) {
             n = n || 'url_prev';
             s = s || sessionStorage;
@@ -45,7 +45,7 @@
         console.log("Les pages autoriser sont : ");
         Url_secure.forEach(element => {console.log(element+', ')});
         // if (pagePrecedente == "https://raykesh-soneka.github.io/Portfolio/Cyber/Cyber.html" || pagePrecedente == (pageRacine+"/AboutMe.html") || pagePrecedente == (pageRacine+"/Cyber/Cyber.html")) {
-        //     //TODO
+            //     //TODO
         if (Url_secure.includes(pagePrecedente)) {// if (pagePrecedente in Url_secure) {
             console.log(true);
             console.log("True");
@@ -75,7 +75,7 @@
             }else{window.location.replace("../Le_Site_De_Raykesh.html");}
         }
         console.log("Fin");
-    </script>
+        </script>
 </head>
 <body>
     <nav>
@@ -110,7 +110,7 @@
                 <h2>Cybersécurité : </h2>
                 <ul>
                     <li><a href="#Item1_Kali">Kali Linux</a></li>
-                    <li><a href="#Item2">Item 2</a></li>
+                    <li><a href="#Item2Cryptographie">Cryptographie</a></li>
                     <li><a href="#Item3">Item 3</a></li>
                 </ul>
             </nav>
@@ -118,35 +118,35 @@
         <h3 id="Item1_Kali">Kali Linux</h3>    
 
         <!-- 
-        ```zsh
+            ```zsh
         ls
         ```
          -->
 
 <br><br><br><br><br>
 <!-- <pre><code >
-ls
+    ls
 </code></pre> -->
 <!-- Sur https://highlight.hohli.com/?numbers=1&theme=github-dark&language=shell -->
 <pre style="font-family:monospace;color: rgb(201, 209, 217); background-color: rgb(13, 17, 23); font-weight: 400; ">
 <ol style="padding-left: 3em;" start="0"><li>ls</li></ol></pre>
 Permet de voir le contenu (<strong style="font-size: 1.5em;">l</strong><span style="font-size: 0.5em;">i</span><strong style="font-size: 1.5em;">s</strong><span style="font-size: 0.5em;">ter</span>) du dossier/répertoire courant 
 <!-- 
-<pre>
-
-    Option utile : 
+    <pre>
+        
+        Option utile : 
         <code>-a, --all</code>              : pour affichez tout (notament les fichiers cachées)
         <code>-A, --almost-all</code>       : pour presque affichez tout (notament les fichiers cachées sans affichez . et .. qui représent respactivement le répertoire courant et le répertoire parent )
         <code>-A, --help</code>             : pour affichez la documentation de base de la commande
         <code>-R, --recursive</code>        : pour affichez récursivement le contenu du répertoire courant et des sous-répertoires
         <code>-s, --size</code>             : pour affichez la taille des fichier
-    Utilisation : ls [OPTION]... [FICHIER]...
-    Example :
+        Utilisation : ls [OPTION]... [FICHIER]...
+        Example :
         Le fichier peut être un répertoire :
         ls ..
         ls
         ls / -R -a
-</pre> 
+    </pre> 
 -->
 <div class="pre" title=" Commande : ls">
     
@@ -193,7 +193,30 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
     <span class="helpDoc"><span style="color: #ff0000">V</span><span style="color: #ff7f00">o</span><span style="color: #ff9200">i</span><span style="color: #00ff00">r</span><span style="color: #00ffff"> </span><span style="color: #0000ff">a</span><span style="color: #8b00ff">u</span><span style="color: #ff0000">s</span><span style="color: #ff7f00">s</span><span style="color: #ffa900">i</span><span style="color: #00ff00"> </span><span style="color: #3c00ff">:</span><span style="color: #0000ff"> </span><span style="color: gold;"> nmap <span class="Option"><span class="OneLetterOption">-h</span></span></span></span>
 </div>
 <!-- TODO crawler, john, yes, cat, kex, neofetch, sudo apt,... -->
-        <h3 id="Item2">Item 2</h3>    
+
+        <h3 id="Item2Cryptographie">Cryptographie</h3>    
+
+        Example : <br>
+        Texte/text          : Texte<br>
+        MDP/pwd             : Test<br>
+        Texte/text chiffré  : ...<br>
+        <div><br>
+
+            <input type="text" id="inputT" placeholder="Entrer le Texte" value="Texte"><br>
+            <input type="text" id="inputM" placeholder="Entrer le MDP" value="Test"><br>
+            Cryptage (on préféra le terme chffrage/chiffrement) : <br>
+
+            <button onclick="testInputC()">Chiffrer</button><br>
+            <div class="outputC"></div><br>
+        </div>
+
+        déchffrage : <br>
+
+        <button onclick="testInputD()">Déchiffrer</button><br>
+        <div class="outputC"></div><br>
+
+        <textarea name="Exemple" id="TestTexteArea" cols="30" rows="10">TODO</textarea><br>
+
         <h3 id="Item3">Item 3</h3>    
         </section>
         <div class="fin"></div>
@@ -203,5 +226,39 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
     <footer class="kaliSVG">
         © Raykesh 2024. All rights reserved.
     </footer>
+    <script type="module" src="./utf8StringToSha256Hash.js">
+    </script>
+    <script>
+        // TODO
+        console.log("test");
+        import utf8StringToSha256Hash from "utf8StringToSha256Hash.js";
+        console.log("test");
+        function testInputC() {
+            const inputT = document.getElementById("inputT").value;
+            const inputM = document.getElementById("inputM").value;
+            const hash = utf8StringToSha256Hash(inputM);
+    
+    
+            const cle = "${hash}";
+            const encryptedStr = xorEncrypt(inputT, cle);
+            // console.log(encryptedStr); // Output: a encrypted string
+            document.getElementById("outputC").innerHTML = `Encryptée : ${encryptedStr}`;
+    
+            // document.getElementById("output").innerHTML = `SHA-256 Hash: ${hash}`;
+        }
+        function testInputD() {
+            const inputT = document.getElementById("inputT").value;
+            const inputM = document.getElementById("inputM").value;
+            const hash = utf8StringToSha256Hash(inputM);
+    
+    
+            const cle = "${hash}";
+            const decryptedStr = xorEncrypt(inputT, cle);
+            // console.log(decryptedStr); // Output: a decrypted string
+            document.getElementById("output3").innerHTML = `Decrypt : ${decryptedStr}`;
+    
+            // document.getElementById("output").innerHTML = `SHA-256 Hash: ${hash}`;
+        }
+    </script>
 </body>
 </html>
