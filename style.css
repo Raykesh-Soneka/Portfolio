@@ -35,6 +35,8 @@ nav .LeProfile{
         width: 40px;
         height: 40px;
         border-radius: 40%;
+        cursor: url(../images/Luffy\ Person.cur),auto;
+        cursor: url(images/Luffy\ Person.cur),auto;
     }
     h1{
         margin-left: 10px;
