@@ -235,11 +235,18 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
             const inputT = document.getElementById("inputT").value;
             const inputM = document.getElementById("inputM").value;
             const hash = utf8StringToSha256Hash(inputM);
-            
-            
+            console.log("inputT   :");
+            console.log(inputT)
+            console.log("inputM   :");
+            console.log(inputM)
+            console.log("hash     :");
+            console.log(hash)
+
             const cle = "${hash}";
+            console.log("clée     :");
+            console.log(cle)
             const encryptedStr = xorEncrypt(inputT, cle);
-            // console.log(encryptedStr); // Output: a encrypted string
+            console.log(encryptedStr); // Output: a encrypted string
             document.getElementById("outputC").innerHTML = `Encryptée : ${encryptedStr}`;
             
             // document.getElementById("output").innerHTML = `SHA-256 Hash: ${hash}`;
