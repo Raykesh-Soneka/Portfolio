@@ -207,13 +207,13 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
             Cryptage (on préféra le terme chffrage/chiffrement) : <br>
 
             <button onclick="testInputC()">Chiffrer</button><br>
-            <div id="outputC">Chiffrer</div><br>
+            <div id="outputC">Texte Chiffrer</div><br>
         </div>
 
-        déchffrage : <br>
+        déchiffrage : <br>
 
         <button onclick="testInputD()">Déchiffrer</button><br>
-        <div id="outputD"></div><br>
+        <div id="outputD">Texte Déhiffré</div><br>
 
         <textarea name="Exemple" id="TestTexteArea" cols="30" rows="10">TODO</textarea><br>
 
@@ -247,8 +247,9 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
             var cle = `${hash}`;
             console.log("clée     :");
             console.log(cle)
-            cle = (cle.repeat( inputT.length/cle.length - inputT.length%cle.length + 1 ))
-            console.log(cle.repeat( inputT.length/cle.length - inputT.length%cle.length + 1 ))
+            // cle = (cle.repeat( inputT.length/cle.length + 1 - inputT.length%cle.length ))
+            cle = cle.repeat(Math.ceil(inputT.length / cle.length));
+            console.log(cle)
             const encryptedStr = xorEncrypt(inputT, cle);
             console.log(encryptedStr); // Output: a encrypted string
             document.getElementById("outputC").innerHTML = `Encryptée : |${encryptedStr}|`;
@@ -272,9 +273,11 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
             const cle = `${hash}`;
             console.log("clée     :");
             console.log(cle)
+            cle = cle.repeat(Math.ceil(inputT.length / cle.length));
+            console.log(cle)
             const decryptedXorStr = xorEncrypt(inputT, cle);
             console.log(decryptedXorStr); // Output: a decrypted string
-            document.getElementById("outputD").innerHTML = `Decrypt : ${decryptedXorStr}`;
+            document.getElementById("outputD").innerHTML = `Decrypt : |${decryptedXorStr}|`;
             
             // document.getElementById("output").innerHTML = `SHA-256 Hash: ${hash}`;
         }
