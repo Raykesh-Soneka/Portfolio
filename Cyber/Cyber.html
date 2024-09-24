@@ -199,7 +199,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         Example : <br>
         Texte/text          : Texte<br>
         MDP/pwd             : Test<br>
-        Texte/text chiffré  : ...<br>
+        Texte/text chiffré  : 5RLM\<br>
         <div><br>
 
             <input type="text" id="inputT" placeholder="Entrer le Texte" value="Texte"><br>
@@ -214,7 +214,8 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
 
         <button onclick="testInputD()">Déchiffrer</button><br>
         <div id="outputD">Texte Déhiffré</div><br>
-
+        On remarquera que le chiffrage et le déchiffrage utilise une même fonction en plus d'être simple pour l'instant.
+        On pourra voir une version plus sophistiqué par la suite, qui part du même principe mais avec plusieur couche imbriquer.
         <textarea name="Exemple" id="TestTexteArea" cols="30" rows="10">TODO</textarea><br>
 
         <h3 id="Item3">Item 3</h3>    
@@ -270,7 +271,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
             console.log(hash)
             
             
-            const cle = `${hash}`;
+            var cle = `${hash}`;
             console.log("clée     :");
             console.log(cle)
             cle = cle.repeat(Math.ceil(inputT.length / cle.length));
