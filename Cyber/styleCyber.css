@@ -194,6 +194,14 @@ nav ul li:hover{
         animation: NomDeL_Animation1 5s ease-in-out 1s infinite;
         color: #FFF;
     }
+    button{
+        cursor: pointer;
+        border-width: 3px;
+        border-radius: 5px;
+        color: #40c900;
+        background-color: rgba(255, 115, 115, 0.185);
+        box-shadow: 5px 2px 10px rgba(245, 245, 245, 0.281);
+    }
 }
 @keyframes test {
     from {background-color: red;}
@@ -202,7 +210,7 @@ nav ul li:hover{
 @keyframes NomDeL_Animation1 {
     0%{background-color: #5a5a5a;}
     10%,20%{background-color: #5a5a5a33;}
-    50%,70%{background-color: #33333333;}
+    50%,70%{background-color: #A3333333;}
     100%{background-color: #10101010;}
 }
 
