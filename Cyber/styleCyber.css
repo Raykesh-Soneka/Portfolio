@@ -195,10 +195,10 @@ nav ul li:hover{
         color: #FFF;
     }
 }
-@keyframes example {
+@keyframes test {
     from {background-color: red;}
-    to {background-color: yellow;}
-  }
+    to {background-color: blue;}
+}
 @keyframes NomDeL_Animation1 {
     0%{background-color: #5a5a5a;}
     10%,20%{background-color: #5a5a5a33;}
