@@ -230,11 +230,12 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         <!-- TODO -->
         
         <div><br>
-            <input type="text" id="inputMX" placeholder="Entrer le MDP" value="Test"><br>
-            Cryptage (on préféra le terme chiffrage/chiffrement) : <br>
+          Chiffrement de césar : <br>
+            <input type="number" id="inputMCesar" placeholder="Entrer le MDP (nombre de décallage)" value="0"><br>
     
             <button onclick="testInputX()">Chiffrer</button><br>
-            <div id="outputX">Texte Chiffrer</div><br>
+            test ==> <br>
+            <div id="outputCesar">Texte</div><br>
         </div>
         <br>
         <textarea name="Exemple" id="TestTexteArea" cols="30" rows="10">TODO</textarea><br>
@@ -251,6 +252,28 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
     <script>
         // TODO
         console.log("test");
+
+        /**
+         * Retourne le message chiffrée ou déchiffré
+         *
+         * @param msg : Chaine de caractère
+         * @param n : entier
+         * @param Decodage : utilise un décallage de -n au lieu de n
+         * @return Le message chiffrée
+         */
+        function encodeCaesar(msg, n, Decodage) {
+          return msg
+            .split("")
+            .map(function(lettre) {
+              if (!alphabet.includes(lettre.toUpperCase())) {
+                return lettre;
+              }
+
+              return shiftlettre(lettre, Decodage ? -n : n);
+            })
+            .join("");
+        }
+
         // import utf8StringToSha256Hash from "utf8StringToSha256Hash.js";
         console.log("test");
         function testInputC() {
