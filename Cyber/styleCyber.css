@@ -46,6 +46,13 @@ nav{
     box-shadow: 25px 25px 25px #00000030;
 }
 
+#TestTexteArea{
+    --Bordure-color-texte:#00000099; /* var(--Bordure-color-texte) */
+    background-color: #77777777;
+    text-shadow: 0.2em 0 var(--Bordure-color-texte), -0.2em 0 var(--Bordure-color-texte), 0 0.2em var(--Bordure-color-texte), 0 -0.2em var(--Bordure-color-texte), 0.1em 0.1em var(--Bordure-color-texte), -0.1em -0.1em var(--Bordure-color-texte), 0.1em -0.1em var(--Bordure-color-texte), -0.1em 0.1em var(--Bordure-color-texte);
+    color: #fff;
+}
+
 nav ul{
     display: flex;
     list-style-type: none;
@@ -147,7 +154,7 @@ nav ul li:hover{
     }
 
     details[open] {
-        padding-bottom: 1em;
+        padding-bottom: 0.1em;
     }
 
     .pre{
