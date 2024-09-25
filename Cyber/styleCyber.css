@@ -51,8 +51,13 @@ nav{
     background-color: #77777777;
     text-shadow: 0.2em 0 var(--Bordure-color-texte), -0.2em 0 var(--Bordure-color-texte), 0 0.2em var(--Bordure-color-texte), 0 -0.2em var(--Bordure-color-texte), 0.1em 0.1em var(--Bordure-color-texte), -0.1em -0.1em var(--Bordure-color-texte), 0.1em -0.1em var(--Bordure-color-texte), -0.1em 0.1em var(--Bordure-color-texte);
     color: #fff;
+    animation: NomDeL_Animation2 10s ease-in-out 0.01s infinite;
+    animation-direction: alternate;
 }
-
+@keyframes NomDeL_Animation2 {
+    0%{background-color: #77777777;}
+    100%{background-color: #77777700;}
+}
 nav ul{
     display: flex;
     list-style-type: none;
