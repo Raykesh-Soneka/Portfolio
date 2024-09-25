@@ -186,6 +186,9 @@ nav ul li:hover{
         }
         .helpDoc{cursor: url(../images/Luffy\ Help.cur),auto;}
     }
+    input{
+        background-color: red;
+    }
 
 }
 
