@@ -235,7 +235,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
     
             <button onclick="testInputCesar()">Chiffrer</button><br>
             test ==> <br>
-            <div id="outputCesar">Texte_TesteCesar</div><br>
+            <div id="outputCesar">Texte</div><br>
         </div>
         <br>
         <textarea name="Exemple" id="TestTexteArea" cols="30" rows="10">TODO</textarea><br>
@@ -267,15 +267,25 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
          * @param Decodage : utilise un décallage de -n au lieu de n
          * @return Le message chiffrée
          */
+        var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         function encodeCaesar(msg, n, Decodage) {
           return msg.split("").map(function(lettre) {
               if (!alphabet.includes(lettre.toUpperCase())) {
                 return lettre;
               }
-
               return shiftlettre(lettre, Decodage ? -n : n);
             })
             .join("");
+        }
+
+        function shiftlettre(lettre, n) {
+          var indice = alphabet.indexOf(lettre.toUpperCase());
+          if (indice === -1) {return lettre;} // Retourne la lettre d'origine si il n'est pas présente dans alphabet
+          var shiftedindice = (indice + n) % 26;
+          if (shiftedindice < 0) {
+            shiftedindice += 26;
+          }
+          return lettre.toUpperCase() === lettre ? alphabet[shiftedindice] : alphabet[shiftedindice].toLowerCase();
         }
 
         // import utf8StringToSha256Hash from "utf8StringToSha256Hash.js";
