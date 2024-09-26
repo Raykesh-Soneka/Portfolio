@@ -235,7 +235,9 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
     
             <button onclick="testInputCesar()">Chiffrer</button><br>
             test ==> <br>
-            <div id="outputCesar">Texte</div><br>
+            <span id="outputCesar0"></span><span id="outputCesar">Texte</span><br>
+            <button onclick="testInputCesar2()">déhiffrer</button><br>
+            <div id="outputCesar2">Texte</div><br>
         </div>
         <br>
         <textarea name="Exemple" id="TestTexteArea" cols="30" rows="10">TODO</textarea><br>
@@ -252,12 +254,20 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
     <script>
         // TODO
         console.log("test");
-        function testInputCesar() {
-            const cle = document.getElementById("inputMCesar").value;
+        function testInputCesar2(cleStr="inputMCesar",inputCesarStr="outputCesar") {
+            const cle = document.getElementById(cleStr).value;
+            const inputCesar = document.getElementById(inputCesarStr).value;
+            const CesarStr = encodeCaesar(inputCesar, cle, false);
+            console.log(CesarStr);
+            document.getElementById("outputCesar").innerHTML = `Encryptée : |${CesarStr}|`;
+          }
+        function testInputCesar(cleStr="inputMCesar") {
+            const cle = document.getElementById(cleStr).value;
             const inputCesar = "Texte_TesteCesar"
             const CesarStr = encodeCaesar(inputCesar, cle, true);
             console.log(CesarStr);
-            document.getElementById("outputCesar").innerHTML = `Encryptée : |${CesarStr}|`;
+            document.getElementById("outputCesar0").innerHTML = `Encryptée : `;
+            document.getElementById("outputCesar").innerHTML = `|${CesarStr}|`;
           }
         /**
          * Retourne le message chiffrée ou déchiffré
