@@ -233,9 +233,9 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
           Chiffrement de césar : <br>
             <input type="number" id="inputMCesar" placeholder="Entrer le MDP (nombre de décallage)" value="0"><br>
     
-            <button onclick="testInputX()">Chiffrer</button><br>
+            <button onclick="testInputCesar()">Chiffrer</button><br>
             test ==> <br>
-            <div id="outputCesar">Texte</div><br>
+            <div id="outputCesar">Texte_TesteCesar</div><br>
         </div>
         <br>
         <textarea name="Exemple" id="TestTexteArea" cols="30" rows="10">TODO</textarea><br>
@@ -252,7 +252,13 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
     <script>
         // TODO
         console.log("test");
-
+        function testInputCesar() {
+            const cle = document.getElementById("inputMCesar").value;
+            const inputCesar = "Texte_TesteCesar"
+            const CesarStr = encodeCaesar(inputCesar, cle, true);
+            console.log(CesarStr);
+            document.getElementById("outputC").innerHTML = `Encryptée : |${CesarStr}|`;
+          }
         /**
          * Retourne le message chiffrée ou déchiffré
          *
@@ -262,9 +268,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
          * @return Le message chiffrée
          */
         function encodeCaesar(msg, n, Decodage) {
-          return msg
-            .split("")
-            .map(function(lettre) {
+          return msg.split("").map(function(lettre) {
               if (!alphabet.includes(lettre.toUpperCase())) {
                 return lettre;
               }
