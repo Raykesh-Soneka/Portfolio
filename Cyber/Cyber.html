@@ -233,7 +233,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
           Chiffrement de césar : <br>
             <input type="number" id="inputMCesar" placeholder="Entrer le MDP (nombre de décallage)" value="0"><br>
     
-            <button onclick="testInputCesar()">Chiffrer</button><br>
+            <button onclick="testInputCesar('inputMCesar')">Chiffrer</button><br>
             test ==> <br>
             <span id="outputCesar0"></span><span id="outputCesar">Texte</span><br>
             <button onclick="testInputCesar2()">déhiffrer</button><br>
@@ -300,9 +300,9 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
 
         // import utf8StringToSha256Hash from "utf8StringToSha256Hash.js";
         console.log("test");
-        function testInputC() {
-            const inputT = document.getElementById("inputT").value;
-            const inputM = document.getElementById("inputM").value;
+        function testInputC(inputTSTR="inputT",inputMSTR="inputM",outputCSTR="outputC") {
+            const inputT = document.getElementById(inputTSTR).value;
+            const inputM = document.getElementById(inputMSTR).value;
             // const hashTexte = utf8StringToSha256Hash(inputT);
             const hash = utf8StringToSha256Hash(inputM);
             console.log("inputT   :");
@@ -321,13 +321,13 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
             console.log(cle)
             const encryptedStr = xorEncrypt(inputT, cle);
             console.log(encryptedStr); // Output: a encrypted string
-            document.getElementById("outputC").innerHTML = `Encryptée : |${encryptedStr}|`;
+            document.getElementById(outputCSTR).innerHTML = `Encryptée : |${encryptedStr}|`;
             
             // document.getElementById("output").innerHTML = `SHA-256 Hash: ${hash}`;
           }
-          function testInputD() {
-            const inputT = document.getElementById("inputT").value;
-            const inputM = document.getElementById("inputM").value;
+          function testInputD(inputTSTR="inputT",inputMSTR="inputM",outputCSTR="outputD") {
+            const inputT = document.getElementById(inputTSTR).value;
+            const inputM = document.getElementById(inputMSTR).value;
             // const hashTexte = utf8StringToSha256Hash(inputT);
             const hash = utf8StringToSha256Hash(inputM);
             console.log("inputT   :");
@@ -346,7 +346,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
             console.log(cle)
             const decryptedXorStr = xorEncrypt(inputT, cle);
             console.log(decryptedXorStr); // Output: a decrypted string
-            document.getElementById("outputD").innerHTML = `Decrypt : |${decryptedXorStr}|`;
+            document.getElementById(outputCSTR).innerHTML = `Decrypt : |${decryptedXorStr}|`;
             
             // document.getElementById("output").innerHTML = `SHA-256 Hash: ${hash}`;
         }
