@@ -235,6 +235,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
     
             <button onclick="testInputCesar('inputMCesar')">Chiffrer</button><br>
             test ==> <br>
+            
             <span id="outputCesar0"></span><span id="outputCesar">Texte</span><br>
             <button onclick="testInputCesar2()">déhiffrer</button><br>
             <div id="outputCesar2">Texte</div><br>
@@ -256,7 +257,11 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         console.log("test");
         function testInputCesar2(cleStr="inputMCesar",inputCesarStr="outputCesar") {
           const cle = document.getElementById(cleStr).value;
-          const inputCesar = document.getElementById(inputCesarStr).value;
+          // const inputCesar = document.getElementById(inputCesarStr).value; // DON'T have VALUE ATTRIBUT
+          const inputCesar = document.getElementById(inputCesarStr).textContent;
+          // const inputCesar = document.getElementById(inputCesarStr).innerHTML;
+          // console.log(inputCesar)
+          // console.log(cle)
           const CesarStr = encodeCaesar(inputCesar, cle, false);
           console.log(CesarStr);
           document.getElementById("outputCesar").innerHTML = `Encryptée : |${CesarStr}|`;
