@@ -1,11 +1,23 @@
 
 def caesar_cipher(text, shift, charset):
     result = ""
+    Complexity=2
+    Roue=3
+    Roue2=5
 
     for char in text:
         if char in charset:  # Check if character is in the custom charset
-            idx = charset.index(char)  # Get the index of the character in the charset
-            new_idx = (idx + shift) % len(charset)  # Calculate the new index with the shift
+            idx = charset.index(char)
+            new_idx = (idx + shift) % len(charset)
+            if Complexity>=1:
+                if shift>=0:
+                    shift +=Roue  #Add Complexity 1
+                    if Complexity>=2 and shift%2==0:
+                        shift +=Roue2  #Add Complexity 2
+                else:
+                    shift -=Roue
+                    if Complexity>=2 and shift%2==0:
+                        shift -=Roue2  #Add Complexity 2
             result += charset[new_idx]  # Get the character at the new index
         else:
             result += char  # Characters not in the charset remain unchanged
@@ -20,16 +32,20 @@ utf8_charset = [chr(i) for i in range(sys.maxunicode + 1)]  # Generate the UTF-8
 
 
 # Example usage:
-text = "Hello, World! 123Aza)"
+text = "Hello, World! 123Aza)"+custom_charset
 shift = 3
 charset_Choisi=utf8_charset
 encrypted_text = caesar_cipher(text, shift, charset_Choisi)
+print(f"\033[36mOriginal  text: {text}\033[0m")
 print(f"Encrypted text: {encrypted_text}")
 
 decrypted_text = caesar_cipher(encrypted_text, -shift, charset_Choisi)
-print(f"Decrypted text: {decrypted_text}")
+print(f"\033[32mDecrypted text: {decrypted_text}\033[0m")
 
 # print(custom_charset)
 # print(ascii_extended)
 # print(utf8_charset)
+# print(len(custom_charset))  #72
+# print(len(ascii_extended))  #256
+# print(len(utf8_charset))    #1114112   > 1 million
 
