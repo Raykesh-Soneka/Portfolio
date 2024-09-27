@@ -238,7 +238,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
             
             <span id="outputCesar0"></span><span id="outputCesar">Texte</span><br>
             <button onclick="testInputCesar2()">déhiffrer</button><br>
-            <div id="outputCesar2">Texte</div><br>
+            Décryptée : <div id="outputCesar2" style="display: inline">Texte</div><br>
         </div>
         <br>
         <textarea name="Exemple" id="TestTexteArea" cols="30" rows="10">TODO</textarea><br>
@@ -260,11 +260,11 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
           // const inputCesar = document.getElementById(inputCesarStr).value; // DON'T have VALUE ATTRIBUT
           const inputCesar = document.getElementById(inputCesarStr).textContent;
           // const inputCesar = document.getElementById(inputCesarStr).innerHTML;
-          // console.log(inputCesar)
-          // console.log(cle)
+          console.log(inputCesar)
+          console.log(cle)
           const CesarStr = encodeCaesar(inputCesar, cle, false);
           console.log(CesarStr);
-          document.getElementById("outputCesar").innerHTML = `Encryptée : |${CesarStr}|`;
+          document.getElementById("outputCesar2").innerHTML = `|${CesarStr}|`;
         }
         function testInputCesar(cleStr="inputMCesar") {
           const cle = document.getElementById(cleStr).value;
@@ -283,10 +283,16 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
          * @return Le message chiffrée
          */
         function encodeCaesar2(msg, n, decode) {
+          _debug = false
+          if(_debug){console.log("encodeCaesar2 debuggage")}
+          if(_debug){console.log(msg)}
+          if(_debug){console.log(n)}
+          if(_debug){console.log(decode)}
           return msg.split("").map(function(char) {
             if (!isLetter(char)) {
               return char;
             }
+            if(_debug){console.log(decode ? -n : n)}
             return shiftChar2(char, decode ? -n : n);
           }).join("");
         }
@@ -294,6 +300,9 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         function shiftChar2(char, n) {
           const unicode = char.charCodeAt(0);
           let shiftedUnicode;
+          _debug = false
+          if(_debug){console.log(char)}
+          if(_debug){console.log(n)}
 
           if (isUppercase(char)) {
             shiftedUnicode = (unicode - 65 + n) % 26 + 65;
