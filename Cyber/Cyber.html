@@ -325,7 +325,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         }
         var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         function encodeCaesar(msg, n, Decodage) {
-          _debug = false
+          _debug = true
           console.log(_debug)
           if(_debug){console.log("encodeCaesar2 debuggage")}
           if(_debug){console.log(msg)}
@@ -335,7 +335,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
               if (!alphabet.includes(lettre.toUpperCase())) {
                 return lettre;
               }
-              if(_debug){console.log(decode ? -n : n)}
+              if(_debug){console.log(Decodage ? -n : n)}
               return shiftlettre(lettre, Decodage ? -n : n);
             })
             .join("");
