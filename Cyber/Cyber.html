@@ -277,6 +277,37 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
          * @param Decodage : utilise un décallage de -n au lieu de n
          * @return Le message chiffrée
          */
+        function encodeCaesar2(msg, n, decode) {
+          return msg.split("").map(function(char) {
+            if (!isLetter(char)) {
+              return char;
+            }
+            return shiftChar2(char, decode ? -n : n);
+          }).join("");
+        }
+
+        function shiftChar2(char, n) {
+          const unicode = char.charCodeAt(0);
+          let shiftedUnicode;
+
+          if (isUppercase(char)) {
+            shiftedUnicode = (unicode - 65 + n) % 26 + 65;
+          } else {
+            shiftedUnicode = (unicode - 97 + n) % 26 + 97;
+          }
+
+          return String.fromCharCode(shiftedUnicode);
+        }
+
+        function isLetter(char) {
+          const unicode = char.charCodeAt(0);
+          return (unicode >= 65 && unicode <= 90) || (unicode >= 97 && unicode <= 122);
+        }
+
+      function isUppercase(char) {
+        const unicode = char.charCodeAt(0);
+        return unicode >= 65 && unicode <= 90;
+      }
         var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         function encodeCaesar(msg, n, Decodage) {
           return msg.split("").map(function(lettre) {
