@@ -255,20 +255,20 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         // TODO
         console.log("test");
         function testInputCesar2(cleStr="inputMCesar",inputCesarStr="outputCesar") {
-            const cle = document.getElementById(cleStr).value;
-            const inputCesar = document.getElementById(inputCesarStr).value;
-            const CesarStr = encodeCaesar(inputCesar, cle, false);
-            console.log(CesarStr);
-            document.getElementById("outputCesar").innerHTML = `Encryptée : |${CesarStr}|`;
-          }
+          const cle = document.getElementById(cleStr).value;
+          const inputCesar = document.getElementById(inputCesarStr).value;
+          const CesarStr = encodeCaesar(inputCesar, cle, false);
+          console.log(CesarStr);
+          document.getElementById("outputCesar").innerHTML = `Encryptée : |${CesarStr}|`;
+        }
         function testInputCesar(cleStr="inputMCesar") {
-            const cle = document.getElementById(cleStr).value;
-            const inputCesar = "Texte_TesteCesar"
-            const CesarStr = encodeCaesar(inputCesar, cle, true);
-            console.log(CesarStr);
-            document.getElementById("outputCesar0").innerHTML = `Encryptée : `;
-            document.getElementById("outputCesar").innerHTML = `|${CesarStr}|`;
-          }
+          const cle = document.getElementById(cleStr).value;
+          const inputCesar = "Texte_TesteCesar"
+          const CesarStr = encodeCaesar(inputCesar, cle, true);
+          console.log(CesarStr);
+          document.getElementById("outputCesar0").innerHTML = `Encryptée : `;
+          document.getElementById("outputCesar").innerHTML = `|${CesarStr}|`;
+        }
         /**
          * Retourne le message chiffrée ou déchiffré
          *
@@ -304,10 +304,10 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
           return (unicode >= 65 && unicode <= 90) || (unicode >= 97 && unicode <= 122);
         }
 
-      function isUppercase(char) {
-        const unicode = char.charCodeAt(0);
-        return unicode >= 65 && unicode <= 90;
-      }
+        function isUppercase(char) {
+          const unicode = char.charCodeAt(0);
+          return unicode >= 65 && unicode <= 90;
+        }
         var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         function encodeCaesar(msg, n, Decodage) {
           return msg.split("").map(function(lettre) {
