@@ -284,6 +284,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
          */
         function encodeCaesar2(msg, n, decode) {
           _debug = false
+          console.log(_debug)
           if(_debug){console.log("encodeCaesar2 debuggage")}
           if(_debug){console.log(msg)}
           if(_debug){console.log(n)}
@@ -324,10 +325,17 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         }
         var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         function encodeCaesar(msg, n, Decodage) {
+          _debug = false
+          console.log(_debug)
+          if(_debug){console.log("encodeCaesar2 debuggage")}
+          if(_debug){console.log(msg)}
+          if(_debug){console.log(n)}
+          if(_debug){console.log(decode)}
           return msg.split("").map(function(lettre) {
               if (!alphabet.includes(lettre.toUpperCase())) {
                 return lettre;
               }
+              if(_debug){console.log(decode ? -n : n)}
               return shiftlettre(lettre, Decodage ? -n : n);
             })
             .join("");
@@ -335,6 +343,11 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
 
         function shiftlettre(lettre, n) {
           var indice = alphabet.indexOf(lettre.toUpperCase());
+          _debug = false
+          if(_debug){console.log(lettre)}
+          if(_debug){console.log(indice)}
+          if(_debug){console.log(n)}
+
           if (indice === -1) {return lettre;} // Retourne la lettre d'origine si il n'est pas présente dans alphabet
           var shiftedindice = (indice + n) % 26;
           if (shiftedindice < 0) {
