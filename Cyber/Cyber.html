@@ -262,14 +262,14 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
           // const inputCesar = document.getElementById(inputCesarStr).innerHTML;
           console.log(inputCesar)
           console.log(cle)
-          const CesarStr = encodeCaesar(inputCesar, cle, false);
+          const CesarStr = encodeCaesar(inputCesar, cle, true);
           console.log(CesarStr);
           document.getElementById("outputCesar2").innerHTML = `|${CesarStr}|`;
         }
         function testInputCesar(cleStr="inputMCesar") {
           const cle = document.getElementById(cleStr).value;
           const inputCesar = "Texte_TesteCesarabcABC"
-          const CesarStr = encodeCaesar(inputCesar, cle, true);
+          const CesarStr = encodeCaesar(inputCesar, -cle, true);
           console.log(CesarStr);
           document.getElementById("outputCesar0").innerHTML = `Encryptée : `;
           document.getElementById("outputCesar").innerHTML = `|${CesarStr}|`;
@@ -325,7 +325,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         }
         var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         function encodeCaesar(msg, n, Decodage) {
-          _debug = false
+          _debug = true
           console.log(_debug)
           if(_debug){console.log("encodeCaesar debuggage")}
           if(_debug){console.log(msg)}
@@ -343,10 +343,9 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
 
         function shiftlettre(lettre, n) {
           var indice = alphabet.indexOf(lettre.toUpperCase());
-          _debug = false
-          if(_debug){console.log(lettre)}
-          if(_debug){console.log(indice)}
-          if(_debug){console.log(n)}
+          _debug = true
+          if(_debug){console.log(['lettre',lettre,'indice',indice,'n',n])}
+
 
           if (indice === -1) {return lettre;} // Retourne la lettre d'origine si il n'est pas présente dans alphabet
           var shiftedindice = (indice + n) % 26;
