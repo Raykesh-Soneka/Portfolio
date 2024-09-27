@@ -268,7 +268,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         }
         function testInputCesar(cleStr="inputMCesar") {
           const cle = document.getElementById(cleStr).value;
-          const inputCesar = "Texte_TesteCesar"
+          const inputCesar = "Texte_TesteCesarabcABC"
           const CesarStr = encodeCaesar(inputCesar, cle, true);
           console.log(CesarStr);
           document.getElementById("outputCesar0").innerHTML = `Encryptée : `;
@@ -325,9 +325,9 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         }
         var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         function encodeCaesar(msg, n, Decodage) {
-          _debug = true
+          _debug = false
           console.log(_debug)
-          if(_debug){console.log("encodeCaesar2 debuggage")}
+          if(_debug){console.log("encodeCaesar debuggage")}
           if(_debug){console.log(msg)}
           if(_debug){console.log(n)}
           if(_debug){console.log(Decodage)}
