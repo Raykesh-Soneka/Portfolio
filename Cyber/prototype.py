@@ -1,9 +1,10 @@
 
 def caesar_cipher(text, shift, charset):
     result = ""
-    Complexity=2
+    Complexity=3
     Roue=3
     Roue2=5
+    n=100
 
     for char in text:
         if char in charset:  # Check if character is in the custom charset
@@ -12,12 +13,14 @@ def caesar_cipher(text, shift, charset):
             if Complexity>=1:
                 if shift>=0:
                     shift +=Roue  #Add Complexity 1
-                    if Complexity>=2 and shift%2==0:
-                        shift +=Roue2  #Add Complexity 2
+                    if Complexity>=2 and shift%2==0:shift +=Roue2  #Add Complexity 2
                 else:
                     shift -=Roue
-                    if Complexity>=2 and shift%2==0:
-                        shift -=Roue2  #Add Complexity 2
+                    if Complexity>=2 and shift%2==0:shift -=Roue2  #Add Complexity 2
+            if Complexity>=3 and shift%3==0: #Add Complexity 3
+                shift=-shift
+                if shift>=0:shift -=n
+                else:shift +=n
             result += charset[new_idx]  # Get the character at the new index
         else:
             result += char  # Characters not in the charset remain unchanged
