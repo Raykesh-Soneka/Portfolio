@@ -245,12 +245,12 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         <div><br>
           avant on avait un charset très court (abc...xyz), or là on a ...<br>
           Chiffrement de césar : <br>
-            <input type="number" id="" placeholder="Entrer le MDP (nombre de décallage)" value="0"><br>
-    
-            <button onclick="">Chiffrer</button><br>
+            <input type="number" id="inputMCesar_2" placeholder="Entrer le MDP (nombre de décallage)" value="1"><br>
+            <input type="text" id="inputT_2" placeholder="Entrer le Texte" value="Texte_TesteCesar_2abcABC"><br>
+            <button onclick="testInputCesar_3('inputMCesar_2','inputT_2')">Chiffrer</button><br>
             test ==> <br>
             
-            <span id=""><span id=""></span><span id="">Texte</span></span><br>
+            <span id="outputCesarSpe_2"><span id="outputCesar0_2"></span><span id="outputCesar_2">Texte</span></span><br>
             <button onclick="">déhiffrer</button><br>
             Décryptée : <div id="" style="display: inline">Texte</div><br>
         </div>
@@ -270,6 +270,16 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
     <script>
         // TODO
         console.log("test");
+        function testInputCesar_3(cleStr="inputMCesar_2",inputCesarStr="inputT_2") {
+          const cle = document.getElementById(cleStr).value;
+          const inputCesar = document.getElementById(inputCesarStr).value;
+          console.log('inputCesar : ');console.log(inputCesar)
+          console.log('cle : ');console.log(cle)
+          const CesarStr = encodeCesarUTF8(inputCesar, cle);
+          console.log(CesarStr);
+          document.getElementById("outputCesar0_2").innerHTML = `Encryptée : `;
+          document.getElementById("outputCesar_2").innerHTML = `|${CesarStr}|`;
+        }
         function testInputCesar2(cleStr="inputMCesar",inputCesarStr="outputCesar") {
           const cle = document.getElementById(cleStr).value;
           // const inputCesar = document.getElementById(inputCesarStr).value; // DON'T have VALUE ATTRIBUT
@@ -289,54 +299,23 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
           document.getElementById("outputCesar0").innerHTML = `Encryptée : `;
           document.getElementById("outputCesar").innerHTML = `|${CesarStr}|`;
         }
-        /**
-         * Retourne le message chiffrée ou déchiffré
-         *
-         * @param msg : Chaine de caractère
-         * @param n : entier
-         * @param Decodage : utilise un décallage de -n au lieu de n
-         * @return Le message chiffrée
-         */
-        function encodeCaesar2(msg, n, decode) {
-          _debug = false
-          console.log(_debug)
-          if(_debug){console.log("encodeCaesar2 debuggage")}
-          if(_debug){console.log(msg)}
-          if(_debug){console.log(n)}
-          if(_debug){console.log(decode)}
-          return msg.split("").map(function(char) {
-            if (!isLetter(char)) {
-              return char;
-            }
-            if(_debug){console.log(decode ? -n : n)}
-            return shiftChar2(char, decode ? -n : n);
-          }).join("");
-        }
+        function encodeCesarUTF8(text, shift) {
+          // const text = 'Texte_TesteCesar_2abcABC';
+          const encoder = new TextEncoder('utf-8');
+          const uint8Array = encoder.encode(text);
+          const decoder = new TextDecoder('utf-8');
+          
+          const codePoints = Array.from(decoder.decode(uint8Array));  // Decode the UTF-8 string to a Unicode code point array
+          console.log(codePoints); // Output: Arrays"Texte_TesteCesar_2abcABC"
+          
+          const shiftedCodePoints = codePoints.map(codePoint => {
+            return (codePoint + shift) % 0x10FFFF;
+          });
+          
+          
+          const encryptedText = encoder.encode(shiftedCodePoints);  // Encode the resulting code points back to a UTF-8 string
 
-        function shiftChar2(char, n) {
-          const unicode = char.charCodeAt(0);
-          let shiftedUnicode;
-          _debug = false
-          if(_debug){console.log(char)}
-          if(_debug){console.log(n)}
-
-          if (isUppercase(char)) {
-            shiftedUnicode = (unicode - 65 + n) % 26 + 65;
-          } else {
-            shiftedUnicode = (unicode - 97 + n) % 26 + 97;
-          }
-
-          return String.fromCharCode(shiftedUnicode);
-        }
-
-        function isLetter(char) {
-          const unicode = char.charCodeAt(0);
-          return (unicode >= 65 && unicode <= 90) || (unicode >= 97 && unicode <= 122);
-        }
-
-        function isUppercase(char) {
-          const unicode = char.charCodeAt(0);
-          return unicode >= 65 && unicode <= 90;
+          return encryptedText;
         }
         var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         function encodeCaesar(msg, n, Decodage) {
