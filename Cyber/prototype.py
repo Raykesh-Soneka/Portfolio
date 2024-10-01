@@ -62,7 +62,7 @@ print(f"\033[32mDecrypted text: {decrypted_text}\033[0m")
 # f.close()
 # print("écrit")
 # f = open("utf8_charset.txt", "w", encoding="utf-8").encode("utf-8")
-with open("utf8_charset.txt", "w", encoding='utf-8') as f:
+with open("Cyber/utf8_charset.txt", "w", encoding='utf-8') as f:
     f.write('[')
     for i in utf8_charset:
         f.write("'")
