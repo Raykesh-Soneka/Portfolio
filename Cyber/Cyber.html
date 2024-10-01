@@ -299,14 +299,29 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
           document.getElementById("outputCesar0").innerHTML = `Encryptée : `;
           document.getElementById("outputCesar").innerHTML = `|${CesarStr}|`;
         }
-        function encodeCesarUTF8(text, shift) {
+        function encodeCesarUTF8(text="Texte_TesteCesar_2abcABC", shift=0) {
           // const text = 'Texte_TesteCesar_2abcABC';
-          var array = [" " ,"!", "#" ,"$" ,"%" ,"&" ,"'" ,"(" ,")" ,"*" ,"+" ,"," ,"-" ,"." ,"/" ,"0" ,"1" ,"2" ,"3" ,"4" ,"5" ,"6" ,"7" ,"8" ,"9" ,":" ,";" ,"<" ,"=" ,">" ,"?" ,"@" ,"A" ,"B" ,"C" ,"D" ,"E" ,"F" ,"G" ,"H" ,"I" ,"J" ,"K" ,"L" ,"M" ,"N" ,"O" ,"P" ,"Q" ,"R" ,"S" ,"T" ,"U" ,"V" ,"W" ,"X" ,"Y" ,"Z" ,"[" ,"]" ,"^" ,"_" ,"a" ,"b" ,"c" ,"d" ,"e" ,"f" ,"g" ,"h" ,"i" ,"j" ,"k" ,"l" ,"m" ,"n" ,"o" ,"p" ,"q" ,"r" ,"s" ,"t" ,"u" ,"v" ,"w" ,"x" ,"y" ,"z" ,"{" ,"|" ,"}"];
+          // var array = [" " ,"!", "#" ,"$" ,"%" ,"&" ,"'" ,"(" ,")" ,"*" ,"+" ,"," ,"-" ,"." ,"/" ,"0" ,"1" ,"2" ,"3" ,"4" ,"5" ,"6" ,"7" ,"8" ,"9" ,":" ,";" ,"<" ,"=" ,">" ,"?" ,"@" ,"A" ,"B" ,"C" ,"D" ,"E" ,"F" ,"G" ,"H" ,"I" ,"J" ,"K" ,"L" ,"M" ,"N" ,"O" ,"P" ,"Q" ,"R" ,"S" ,"T" ,"U" ,"V" ,"W" ,"X" ,"Y" ,"Z" ,"[" ,"]" ,"^" ,"_" ,"a" ,"b" ,"c" ,"d" ,"e" ,"f" ,"g" ,"h" ,"i" ,"j" ,"k" ,"l" ,"m" ,"n" ,"o" ,"p" ,"q" ,"r" ,"s" ,"t" ,"u" ,"v" ,"w" ,"x" ,"y" ,"z" ,"{" ,"|" ,"}"];
+          var array = ["A" ,"B" ,"C" ,"D" ,"E" ,"F" ,"G" ,"H" ,"I" ,"J" ,"K" ,"L" ,"M" ,"N" ,"O" ,"P" ,"Q" ,"R" ,"S" ,"T" ,"U" ,"V" ,"W" ,"X" ,"Y" ,"Z" ,"2" ,"_" ,"a" ,"b" ,"c" ,"d" ,"e" ,"f" ,"g" ,"h" ,"i" ,"j" ,"k" ,"l" ,"m" ,"n" ,"o" ,"p" ,"q" ,"r" ,"s" ,"t" ,"u" ,"v" ,"w" ,"x" ,"y" ,"z" ];
           _debug = true
           if(_debug){console.log("encodeCesarUTF8 debuggage")}
           if(_debug){console.log(text)}
           if(_debug){console.log(shift)}
 
+          var result = "";
+          for (var i = 0; i < text.length; i++) {
+            var charIndex = array.indexOf(text[i]);
+            if (charIndex !== -1) {
+              var newIndex = (charIndex + shift) % array.length;
+              if (newIndex < 0) {
+                newIndex += array.length;
+              }
+              result += array[newIndex];
+            } else {
+              result += text[i];
+            }
+          }
+          return result;
         }
         var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         function encodeCaesar(msg, n, Decodage) {
