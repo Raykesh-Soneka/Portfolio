@@ -52,10 +52,22 @@ print(f"\033[32mDecrypted text: {decrypted_text}\033[0m")
 # print(len(ascii_extended))  #256
 # print(len(utf8_charset))    #1114112   > 1 million
 
-f = open("utf8_charset.txt", "w")
-f.write('[')
-for i in utf8_charset:
-    f.write("'");f.write(i);f.write("' ,");
-f.write(']')
-f.close()
-print("écrit")
+# f = open("utf8_charset.txt", "w", encoding="utf-8").encode("utf-8")
+# f.write('[')
+# for i in utf8_charset:
+#     f.write("'")
+#     f.write(i)
+#     f.write("' ,");
+# f.write(']')
+# f.close()
+# print("écrit")
+# f = open("utf8_charset.txt", "w", encoding="utf-8").encode("utf-8")
+with open("utf8_charset.txt", "w", encoding='utf-8') as f:
+    f.write('[')
+    for i in utf8_charset:
+        f.write("'")
+        f.write(i.encode('utf8','replace').decode('utf8','replace'))
+        f.write("' ,")
+    f.write(']')
+    f.close()
+    print("écrit")
