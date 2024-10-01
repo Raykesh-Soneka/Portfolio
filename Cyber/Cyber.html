@@ -301,18 +301,8 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         }
         function encodeCesarUTF8(text, shift) {
           // const text = 'Texte_TesteCesar_2abcABC';
-          const encoder = new TextEncoder('utf-8');
-          const utf8Bytes = encoder.encode(text);
-          const decoder = new TextDecoder('utf-8');
-          const decodedStr = decoder.decode(utf8Bytes);
-          console.log(decodedStr); // Output: "Texte_TesteCesar_2abcABC
-          const MettreDecaller = utf8Bytes.map(utf8Bytes => {
-            return (utf8Bytes + shift) % 0x10FFFF
-          });
-          const decodedStr2 = decoder.decode(MettreDecaller);
-          console.log(decodedStr2);
-          return decodedStr2;
-
+          var array = ['a', 'b', 'c'];
+          
         }
         var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         function encodeCaesar(msg, n, Decodage) {
