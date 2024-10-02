@@ -252,7 +252,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
             
             <span id="outputCesarSpe_2"><span id="outputCesar0_2"></span><span id="outputCesar_2">Texte</span></span><br>
             <button onclick="">déhiffrer</button><br>
-            Décryptée : <div id="" style="display: inline">Texte</div><br>
+            Décryptée : <div id="outputCesar2_2" style="display: inline">Texte</div><br>
         </div>
         <br>
         <label for="TestTexteArea">.</label>
@@ -279,6 +279,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
           console.log(CesarStr);
           document.getElementById("outputCesar0_2").innerHTML = `Encryptée : `;
           document.getElementById("outputCesar_2").innerHTML = `|${CesarStr}|`;
+          document.getElementById("outputCesar2_2").innerHTML = `|${encodeCesarUTF8(CesarStr, -cle)}|`;
         }
         function testInputCesar2(cleStr="inputMCesar",inputCesarStr="outputCesar") {
           const cle = document.getElementById(cleStr).value;
@@ -301,12 +302,15 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         }
         function encodeCesarUTF8(text="Texte_TesteCesar_2abcABC", shift=0) {
           // const text = 'Texte_TesteCesar_2abcABC';
-          // var array = [" " ,"!", "#" ,"$" ,"%" ,"&" ,"'" ,"(" ,")" ,"*" ,"+" ,"," ,"-" ,"." ,"/" ,"0" ,"1" ,"2" ,"3" ,"4" ,"5" ,"6" ,"7" ,"8" ,"9" ,":" ,";" ,"<" ,"=" ,">" ,"?" ,"@" ,"A" ,"B" ,"C" ,"D" ,"E" ,"F" ,"G" ,"H" ,"I" ,"J" ,"K" ,"L" ,"M" ,"N" ,"O" ,"P" ,"Q" ,"R" ,"S" ,"T" ,"U" ,"V" ,"W" ,"X" ,"Y" ,"Z" ,"[" ,"]" ,"^" ,"_" ,"a" ,"b" ,"c" ,"d" ,"e" ,"f" ,"g" ,"h" ,"i" ,"j" ,"k" ,"l" ,"m" ,"n" ,"o" ,"p" ,"q" ,"r" ,"s" ,"t" ,"u" ,"v" ,"w" ,"x" ,"y" ,"z" ,"{" ,"|" ,"}"];
-          var array = ["A" ,"B" ,"C" ,"D" ,"E" ,"F" ,"G" ,"H" ,"I" ,"J" ,"K" ,"L" ,"M" ,"N" ,"O" ,"P" ,"Q" ,"R" ,"S" ,"T" ,"U" ,"V" ,"W" ,"X" ,"Y" ,"Z" ,"2" ,"_" ,"a" ,"b" ,"c" ,"d" ,"e" ,"f" ,"g" ,"h" ,"i" ,"j" ,"k" ,"l" ,"m" ,"n" ,"o" ,"p" ,"q" ,"r" ,"s" ,"t" ,"u" ,"v" ,"w" ,"x" ,"y" ,"z" ];
+          var array = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
+            "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+            "_", "2"
+          ];
           _debug = true
           if(_debug){console.log("encodeCesarUTF8 debuggage")}
           if(_debug){console.log(text)}
           if(_debug){console.log(shift)}
+          if(_debug){console.log(array)}
 
           var result = "";
           for (var i = 0; i < text.length; i++) {
@@ -318,9 +322,12 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
               }
               result += array[newIndex];
             } else {
+              if(_debug){console.log("not found : "+text[i])}
               result += text[i];
             }
           }
+          if(_debug){console.log(result)}
+          if(_debug){console.log("encodeCesarUTF8 Fin debuggage Sortie ")}
           return result;
         }
         var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
