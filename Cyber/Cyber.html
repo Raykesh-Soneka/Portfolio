@@ -364,54 +364,54 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         // import utf8StringToSha256Hash from "utf8StringToSha256Hash.js";
         console.log("test");
         function testInputC(inputTSTR="inputT",inputMSTR="inputM",outputCSTR="outputC") {
-            const inputT = document.getElementById(inputTSTR).value;
-            const inputM = document.getElementById(inputMSTR).value;
-            // const hashTexte = utf8StringToSha256Hash(inputT);
-            const hash = utf8StringToSha256Hash(inputM);
-            console.log("inputT   :");
-            console.log(inputT)
-            console.log("inputM   :");
-            console.log(inputM)
-            console.log("hash     :");
-            // console.log(hashTexte)
-            console.log(hash)
-            
-            var cle = `${hash}`;
-            console.log("clée     :");
-            console.log(cle)
-            // cle = (cle.repeat( inputT.length/cle.length + 1 - inputT.length%cle.length ))
-            cle = cle.repeat(Math.ceil(inputT.length / cle.length));
-            console.log(cle)
-            const encryptedStr = xorEncrypt(inputT, cle);
-            console.log(encryptedStr); // Output: a encrypted string
-            document.getElementById(outputCSTR).innerHTML = `Encryptée : |${encryptedStr}|`;
-            
-            // document.getElementById("output").innerHTML = `SHA-256 Hash: ${hash}`;
-          }
-          function testInputD(inputTSTR="inputT",inputMSTR="inputM",outputCSTR="outputD") {
-            const inputT = document.getElementById(inputTSTR).value;
-            const inputM = document.getElementById(inputMSTR).value;
-            // const hashTexte = utf8StringToSha256Hash(inputT);
-            const hash = utf8StringToSha256Hash(inputM);
-            console.log("inputT   :");
-            console.log(inputT)
-            console.log("inputM   :");
-            console.log(inputM)
-            console.log("hash     :");
-            // console.log(hashTexte)
-            console.log(hash)
-            
-            
-            var cle = `${hash}`;
-            console.log("clée     :");
-            console.log(cle)
-            cle = cle.repeat(Math.ceil(inputT.length / cle.length));
-            console.log(cle)
-            const decryptedXorStr = xorEncrypt(inputT, cle);
-            console.log(decryptedXorStr); // Output: a decrypted string
-            document.getElementById(outputCSTR).innerHTML = `Decrypt : |${decryptedXorStr}|`;
-            
-            // document.getElementById("output").innerHTML = `SHA-256 Hash: ${hash}`;
+          const inputT = document.getElementById(inputTSTR).value;
+          const inputM = document.getElementById(inputMSTR).value;
+          // const hashTexte = utf8StringToSha256Hash(inputT);
+          const hash = utf8StringToSha256Hash(inputM);
+          console.log("inputT   :");
+          console.log(inputT)
+          console.log("inputM   :");
+          console.log(inputM)
+          console.log("hash     :");
+          // console.log(hashTexte)
+          console.log(hash)
+          
+          var cle = `${hash}`;
+          console.log("clée     :");
+          console.log(cle)
+          // cle = (cle.repeat( inputT.length/cle.length + 1 - inputT.length%cle.length ))
+          cle = cle.repeat(Math.ceil(inputT.length / cle.length));
+          console.log(cle)
+          const encryptedStr = xorEncrypt(inputT, cle);
+          console.log(encryptedStr); // Output: a encrypted string
+          document.getElementById(outputCSTR).innerHTML = `Encryptée : |${encryptedStr}|`;
+          
+          // document.getElementById("output").innerHTML = `SHA-256 Hash: ${hash}`;
+        }
+        function testInputD(inputTSTR="inputT",inputMSTR="inputM",outputCSTR="outputD") {
+          const inputT = document.getElementById(inputTSTR).value;
+          const inputM = document.getElementById(inputMSTR).value;
+          // const hashTexte = utf8StringToSha256Hash(inputT);
+          const hash = utf8StringToSha256Hash(inputM);
+          console.log("inputT   :");
+          console.log(inputT)
+          console.log("inputM   :");
+          console.log(inputM)
+          console.log("hash     :");
+          // console.log(hashTexte)
+          console.log(hash)
+          
+          
+          var cle = `${hash}`;
+          console.log("clée     :");
+          console.log(cle)
+          cle = cle.repeat(Math.ceil(inputT.length / cle.length));
+          console.log(cle)
+          const decryptedXorStr = xorEncrypt(inputT, cle);
+          console.log(decryptedXorStr); // Output: a decrypted string
+          document.getElementById(outputCSTR).innerHTML = `Decrypt : |${decryptedXorStr}|`;
+          
+          // document.getElementById("output").innerHTML = `SHA-256 Hash: ${hash}`;
         }
         </script>
 </body>
