@@ -153,6 +153,19 @@ var arrayCharset = Array.from(new Set(arrayCharsetNU));
 // var arrayCharset = [i for i in arrayCharset if arrayCharset.count() != 0 ];
 // var arrayCharset = arrayCharset.filter(i => arrayCharset.length > 0);
 // var arrayCharset = arrayCharset.filter(i => i.length > 0);
+var arrayCharsetF= ["A", "B", "C"]
+for (var i = 0; i < arrayCharset.length; i++) {// Boucle for pour parcourir la liste
+    document.getElementById("outputCesarFilter").innerHTML = arrayCharset[i]; // On écrit dans la div
+    var _HTMLelementBuffer = document.getElementById("outputCesarFilter").innerHTML; // On récupère le contenue de la div
+    if (arrayCharsetF.indexOf(_HTMLelementBuffer) === -1){arrayCharsetF.push(_HTMLelementBuffer);}
+    var _HTMLelementBuffer = document.getElementById("outputCesarFilter").value; // On récupère le contenue de la div
+    if (arrayCharsetF.indexOf(_HTMLelementBuffer) === -1){arrayCharsetF.push(_HTMLelementBuffer);}
+}
+document.getElementById("outputCesarFilter").innerHTML = "";
+// console.log(`arrayCharsetF : |${arrayCharsetF}|`)
+var arrayCharsetF = Array.from(new Set(arrayCharsetF));
+console.log(`arrayCharsetF : |${arrayCharsetF}|`)
+
 
 var arrayCharsetOLD = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
     "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
