@@ -272,10 +272,11 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         // TODO
         console.log("test");
         function testInputCesar_3(cleStr="inputMCesar_2",inputCesarStr="inputT_2") {
-          const cle = -document.getElementById(cleStr).value;
+          var cle = -document.getElementById(cleStr).value;
           const inputCesar = document.getElementById(inputCesarStr).value;
           console.log('inputCesar : ');console.log(inputCesar)
           console.log('cle : ');console.log(cle)
+          // if (cle >0){cle+=(arrayCharset.length)}
           const CesarStr = encodeCesarUTF8(inputCesar, -cle);
           console.log(CesarStr);
           document.getElementById("outputCesar0_2").innerHTML = `Encryptée : `;
