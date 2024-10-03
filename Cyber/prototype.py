@@ -62,16 +62,18 @@ print(f"\033[32mDecrypted text: {decrypted_text}\033[0m")
 # f.close()
 # print("écrit")
 # f = open("utf8_charset.txt", "w", encoding="utf-8").encode("utf-8")
-with open("Cyber/utf8_charset.txt", "w", encoding='utf-8') as f:
-    f.write('[');ii=0
-    for i in utf8_charset:
-        f.write("\"")
-        try:
-            f.write(i) #.encode('utf8','replace').decode('utf8','replace')
-        except:
-            ii+=1
-            if ii%256==0:print(ii,end=" ")
-        f.write("\" ,")
-    f.write(']')
-    f.close()
-    print("écrit")
+_writeMode = False
+if _writeMode:
+    with open("Cyber/utf8_charset.txt", "w", encoding='utf-8') as f:
+        f.write('[');ii=0
+        for i in utf8_charset:
+            f.write("\"")
+            try:
+                f.write(i) #.encode('utf8','replace').decode('utf8','replace')
+            except:
+                ii+=1
+                if ii%256==0:print(ii,end=" ")
+            f.write("\" ,")
+        f.write(']')
+        f.close()
+        print("écrit")
