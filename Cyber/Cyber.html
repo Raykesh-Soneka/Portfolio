@@ -318,13 +318,13 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
             if (charIndex !== -1) {
               var newIndex = (charIndex +arrayCharset.length+ shift) % arrayCharset.length; // indice de la lettre décaller
               var _R = 1;
-              while (arrayCharset.indexOf(arrayCharset[newIndex])== -1 || arrayCharset.indexOf(arrayCharset[newIndex])== NaN){
+              while (arrayCharset.indexOf(arrayCharset[newIndex])=== -1 || arrayCharset.indexOf(arrayCharset[newIndex])=== NaN){
                 var newIndex = (charIndex +arrayCharset.length+ shift + _R++) % arrayCharset.length;
                 console.log(` _R : ${_R}`);
               }
               console.log(` _R : ${_R}`);
               console.log(` arrayCharset.indexOf(arrayCharset[newIndex]) : ${arrayCharset.indexOf(arrayCharset[newIndex])}   | ${(arrayCharset[newIndex])}`);
-              if (newIndex == -0) {newIndex=+0;console.log("bug -0");console.log(newIndex)} // bug -0
+              if (newIndex === -0) {newIndex=+0;console.log("bug -0");console.log(newIndex)} // bug -0
               result += arrayCharset[newIndex];
             } else {
               if(_debug){console.log("not found : "+text[i])}
