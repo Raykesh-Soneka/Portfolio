@@ -1,14 +1,15 @@
 
 console.log("test");
+
 function testInput_F() {
-    var input_F = document.getElementById("TestTexteArea").innerHTML;
-    console.log(`input : ${input_F}|`);
-    var input_F = "Texte_test_abcdyxz_ABS_XYZ_0123456789";
+    // var input_F = document.getElementById("TestTexteArea").innerHTML; // On récupère le texte
+    // console.log(`input : ${input_F}|`);
+    var input_F = "Texte_test_abcdyxz_ABS_XYZ_0123456789"; // On récupère le texte
     console.log(`input : ${input_F}|`);
     cle=-1
     var CesarStr = encodeCesarUTF8(input_F, -cle);
     var CesarStr = input_F.split("").map(function(lettre) {
-        cle = cle-1
+        // cle = cle-1
         return encodeCesarUTF8(lettre, -cle);
     })
     .join("");
