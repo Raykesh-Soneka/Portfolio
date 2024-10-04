@@ -1,10 +1,15 @@
 
 console.log("test");
 
+function testInput_F2() {
+    var encryptedStr = testInput_F();
+
+
+}
 function testInput_F() {
-    // var input_F = document.getElementById("TestTexteArea").innerHTML; // On récupère le texte
-    // console.log(`input : ${input_F}|`);
-    var input_F = "Texte_test_abcdyxz_ABS_XYZ_0123456789"; // On récupère le texte
+    var input_F = document.getElementById("TestTexteArea").innerHTML; // On récupère le texte
+    console.log(`input : ${input_F}|`);
+    // var input_F = "Texte_test_abcdyxz_ABS_XYZ_0123456789"; // On récupère le texte
     console.log(`input : ${input_F}|`);
     cle=-1
     var CesarStr = encodeCesarUTF8(input_F, -cle);
@@ -27,6 +32,7 @@ function testInput_F() {
     const encryptedStr = xorEncrypt(inputT, cle);
     console.log(`encryptedStr : ${encryptedStr}|`);// Output: a encrypted string
     document.getElementById("TestTexteArea").innerHTML = `${encryptedStr}`;
+    return encryptedStr;
 
 }
 function testInputCesar_3(cleStr="inputMCesar_2",inputCesarStr="inputT_2") {
