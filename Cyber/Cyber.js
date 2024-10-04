@@ -2,10 +2,8 @@
 console.log("test");
 
 
-
 // import * as nom from "http://code.jquery.com/jquery-1.8.3.min.js";
 // import * as nom2 from "jsencrypt.min.js";
-
 
 
 $(function() {
