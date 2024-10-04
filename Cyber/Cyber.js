@@ -1,5 +1,33 @@
 
 console.log("test");
+function testInput_F() {
+    var input_F = document.getElementById("TestTexteArea").innerHTML;
+    console.log(`input : ${input_F}|`);
+    var input_F = "Texte_test_abcdyxz_ABS_XYZ_0123456789";
+    console.log(`input : ${input_F}|`);
+    cle=-1
+    var CesarStr = encodeCesarUTF8(input_F, -cle);
+    var CesarStr = input_F.split("").map(function(lettre) {
+        cle = cle-1
+        return encodeCesarUTF8(lettre, -cle);
+    })
+    .join("");
+    console.log(`CesarStr : ${CesarStr}|`);
+    document.getElementById("TestTexteArea").innerHTML = `${CesarStr}`;
+    var inputT = CesarStr
+    const hash = utf8StringToSha256Hash("test");
+    console.log(`hash : ${hash}|`);
+
+    var cle = `${hash}`;
+    console.log(`clée : ${cle}|`);
+    // cle = (cle.repeat( inputT.length/cle.length + 1 - inputT.length%cle.length ))
+    cle = cle.repeat(Math.ceil(inputT.length / cle.length));
+    console.log(`clée : ${cle}|`);
+    const encryptedStr = xorEncrypt(inputT, cle);
+    console.log(`encryptedStr : ${encryptedStr}|`);// Output: a encrypted string
+    document.getElementById("TestTexteArea").innerHTML = `${encryptedStr}`;
+
+}
 function testInputCesar_3(cleStr="inputMCesar_2",inputCesarStr="inputT_2") {
     var cle = -document.getElementById(cleStr).value;
     const inputCesar = document.getElementById(inputCesarStr).value;
