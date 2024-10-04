@@ -3,6 +3,9 @@ console.log("test");
 
 function testInput_F2() {
     var encryptedInputStr = testInput_F();
+    // testInput_F();
+    // var encryptedInputStr = document.getElementById("TestTexteArea").innerHTML;
+    // encryptedInputStr.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&')
     var inputT = encryptedInputStr;
     const hash = utf8StringToSha256Hash("test");
     console.log(`hash : ${hash}|`);
@@ -56,6 +59,7 @@ function testInput_F() {
     console.log(`clée : ${cle}|`);
     const encryptedStr = xorEncrypt(inputT, cle);
     console.log(`encryptedStr : ${encryptedStr}|`);// Output: a encrypted string
+    // encryptedStr.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&')
     document.getElementById("TestTexteArea").innerHTML = `${encryptedStr}`;
     console.log(`return encryptedStr : ${encryptedStr}|`)
     return encryptedStr;
