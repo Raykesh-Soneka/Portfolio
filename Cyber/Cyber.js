@@ -4,8 +4,9 @@ console.log("test");
 function testInput_F2() {
     var encryptedInputStr = testInput_F();
     // testInput_F();
-    // var encryptedInputStr = document.getElementById("TestTexteArea").innerHTML;
-    // encryptedInputStr.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&')
+    // // var encryptedInputStr = document.getElementById("TestTexteArea").innerHTML;
+    // // encryptedInputStr.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&')
+    // var encryptedInputStr = encodeURI(document.getElementById("TestTexteArea").innerHTML);
     var inputT = encryptedInputStr;
     const hash = utf8StringToSha256Hash("test");
     console.log(`hash : ${hash}|`);
