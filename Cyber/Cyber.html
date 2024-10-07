@@ -216,10 +216,10 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         
         <button onclick="testInputD()">Déchiffrer</button><br>
         <div id="outputD">Texte Déhiffré</div><br>
-        On remarquera que le chiffrage et le déchiffrage utilise une même fonction en plus d'être simple pour l'instant.
-        On pourra voir une version plus sophistiquée par la suite, qui part du même principe mais avec plusieurs couche imbriquée.
+        On remarquera que le chiffrage et le déchiffrage utilisent une même fonction, en plus d'être simples pour l'instant.
+        On pourra voir une version plus sophistiquée par la suite, qui part du même principe mais avec plusieurs couches imbriquées.
 
-        <h3>shift encryption, Chiffrement par décalage ou chiffrement de césar </h3> est une  méthode de chiffrement qui consiste à décaler chaque lettre dans l'alphabet d'un nombre définie de caractère.
+        <h3>shift encryption, Chiffrement par décalage ou chiffrement de césar </h3> est une  méthode de chiffrement qui consiste à décaler chaque lettre dans l'alphabet d'un nombre défini de caractères.
         <style>@media screen and (max-width: 1000px) {.StylescreenPelementUniqueClass0000010212036155{visibility: hidden  !important;font-size: 0.1em;/* display: none;*/}}</style>
         <p class="StylescreenPelementUniqueClass0000010212036155" style="margin-left: 60px;margin-right: 60px; ">C'est un méthode de chiffrement symétrique qui est très connu et relativement simple à mettre en place.
           Pour avoir un meilleur chiffrement ou un chiffrement plus complexe on peux soit augmenter le nombre de caractère (passer de l'alphabet classique à ASCII à ASCII-extended à UTF-8 par Exemple.) ou mélanger les caractère.
@@ -262,9 +262,9 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         <label for="TestTexteArea">.</label>
         <textarea name="Exemple" id="TestTexteArea" cols="30" rows="10">Texte_test_abcdyxz_ABS_XYZ_0123456789</textarea><br>
         
-        Sur le web, l'encodage peut complexifier les algorithmes de chiffrement pour garantir la compatibilité. Il y a aussi des chiffrements asymétriques qui utilisent d'autres principe.
-        Comme par exemple le chiffrement R.S.A. qui utilise un système de clées privé et clées publiques avec des modulo et du PGCD.(Mathématique)
-        <p>Avec une clée <strong>suffisamment grande</strong>, il est très dure de déchiffrer les données sans le mots de passe qui est ausssi une clée.</p>
+        Sur le web, l'encodage peut complexifier les algorithmes de chiffrement pour garantir la compatibilité. Il y a aussi des chiffrements asymétriques qui utilisent d'autres principes.
+        Comme par exemple le chiffrement R.S.A. qui utilise un système de clés privées et clés publiques avec des modulo et du PGCD. (Mathématique)
+        <p>Avec une clé <strong>suffisamment grande</strong>, il est très dur de déchiffrer les données sans le mot de passe qui est aussi une clé.</p>
         
         <label for="privkey">Private Key</label><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
         <textarea id="privkey" rows="15" cols="65" hidden>-----BEGIN RSA PRIVATE KEY-----
@@ -337,13 +337,14 @@ r4Hi6tpqywdNYpbl2M8PKvON1hRt5MQ4PWXUBiHb7OFgxt6BHP7XxEZtXVxptgZn
         <label for="input">Texte à chiffrée :</label><br/>
         <textarea id="input" name="input" type="text" rows=4 cols=70>CPP08b4jjUvGuz5PN6TcCNtP11ZyKmDqzGG+uP+bB8azxIoMjaGrwnnw2IU31sJMPMaHFM/z6Q7b2xgb27u3wTsv6xTcqSIvsWSM6wSuJ7NJP5k4TRpYR/cr7VuEtWoZKSTUI6mSJt9PB2g5D/fmZQ43y9W/AyWNh+z1eWGK3NDH8+qIcERXQGqU73koMJQMuUP62H7xX+Ou8P334a1yIjaarlbTyyNcTR3Nxt5M0xaI9ZuH9ZFNcIFm4ocvxTqS8rWByQsUBGb4Er96NZo3dmYl3K9Yb21YqZEcR3GGvS1z4RLkrKCAwPwyBKAiTuJUzjX+/yj87WpA0NDUm5pQO2wmRvkZ1s+zx6VDB5rVuzUke6KqRgdZf3EH+lFqiR0HJykfm9fmkgri9mySZaiTVs31Fk/i16HKZ9iZ04N6O5utkGRaTSh2IQQWAyMKM9LpFUMaJHDGHBO2fWegYOqMY7ewt3vKteOlnW7ocR2NbfJw9/x7uEn1Ir0LfK+1ea0KLF3HhgxHHv5YQl1YJbJdgZxiu19FA40WOqlPFrLa1s/T2n+nIsQYkRZMEtedi4a+YKgilLSAZTCXB3S99FAX+LVHPNoCG7YY0b12cwHVJeSGPz3NnFEszuzpr3TzMktbOJGNmCZFPhE8WZC65Z6g/Dzg0l+dCpfNO5FOFesrUD0=</textarea><br/>
         <input id="testme" type="button" value="Déhiffré Moi!!!" /><br/>
-        Le texte qu'on vient de voir à été chiffrée avec la clé public et est déchiffrer en direct avec la clé privé.<p> La clé privé est donc nécessaire pour déchiffrer et lire le message</p>
-        Les clés RSA, d'après l'algorithme utilisée ont une partie en commun (un des paramètre) ceux qui peut expliquer qu'une partie de chaque paire de clé est la même. L'algorithme utilisent aussi habilement les nombres premiers pour chiffré les données
-        <p>On finira par remarquer la clé privé est plus long que la clé public, c'est pour s'assurer qu'il n'est <strong>presque</strong> pas possible de retrouver une clé privé à partir de la clé public</p>. Si celle-si est suffisamment longue.
-        Cette algorithme n'est pas un algorithme permettant une fiabilitée post-Quantique mais des solutions post-Quantique on déjà été proposer.
+        Le texte qu'on vient de voir a été chiffré avec la clé publique et est déchiffré en direct avec la clé privée.<p> La clé privée est donc nécessaire pour déchiffrer et lire le message</p>
+        Les clés RSA, d'après l'algorithme utilisé, ont une partie en commun (un des paramètres) ceux qui peut expliquer qu'une partie de chaque paire de clé est la même. L'algorithme utilise aussi habilement les nombres premiers pour chiffrer les données.
+        <p>On finira par remarquer la clé privé est plus long que la clé public, c'est pour s'assurer qu'il n'est <strong>presque</strong> pas possible de retrouver une clé privée à partir de la clé publique. </p>Si celle-ci est suffisamment longue.
+        Cet algorithme n'est pas un algorithme permettant une fiabilité post-Quantique, mais des solutions post-Quantique ont déjà été proposées.
         <br><br>
         En cas de bug, notamment sur github : <button onclick="testInput_RSA()"></button><br>
         
+        Il existe donc plusieurs manières de chiffrer les données, même si on peut aussi les combiner.
         <h3 id="Item3">Item 3</h3>    
         </section>
         <div class="fin"></div>
