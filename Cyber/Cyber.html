@@ -377,6 +377,26 @@ r4Hi6tpqywdNYpbl2M8PKvON1hRt5MQ4PWXUBiHb7OFgxt6BHP7XxEZtXVxptgZn
         //     document.getElementById("input").innerHTML = `${decrypt.decrypt($('#input').val())}`;
         //     });
         // });
+        function Input_RSA(input="input",pubkey="pubkey",privkey="privkey", chiffrer=true) {
+            //Prototype de Chiffrement RSA 
+            // import * as nom from "http://code.jquery.com/jquery-1.8.3.min.js";
+            // import * as nom2 from "jsencrypt.min.js";
+            // <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+            // <script src="jsencrypt.min.js"></script>
+            var encrypt = new JSEncrypt();
+            encrypt.setPublicKey(document.getElementById(pubkey).value);
+            var encrypted = encrypt.encrypt(document.getElementById(input).value);// Encrypt with the public key...
+            var decrypt = new JSEncrypt();
+            decrypt.setPrivateKey(document.getElementById(privkey).value);
+            var uncrypted = decrypt.decrypt(encrypted);// Decrypt with the private key...
+            if (uncrypted == document.getElementById(input).value) {console.log('It works!!!');}else {console.log('Something went wrong....');}// Now a simple check to see if the round-trip worked.
+            
+            if (chiffrer) {
+                document.getElementById(input).innerHTML = `${encrypt.encrypt(document.getElementById(input).value)}`;
+            }else{
+                document.getElementById(input).innerHTML = `${decrypt.decrypt(document.getElementById(input).value)}`;
+            }
+        }
         function testInput_RSA() {
             //Chiffrement RSA 
             var encrypt = new JSEncrypt();
