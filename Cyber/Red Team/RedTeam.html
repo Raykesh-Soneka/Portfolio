@@ -36,17 +36,17 @@
         // <script src="http://code.jquery.com/jquery-1.8.3.min.js"></ script>
         // <script src="jsencrypt.min.js"></ script>
         var encrypt = new JSEncrypt();
-        encrypt.setPublicKey(document.getElementById(pubkey).value);
-        var encrypted = encrypt.encrypt(document.getElementById(input).value);// Encrypt with the public key...
+        encrypt.setPublicKey(document.getElementById(pubkey).innerHTML);
+        var encrypted = encrypt.encrypt(document.getElementById(input).innerHTML);// Encrypt with the public key...
         var decrypt = new JSEncrypt();
-        decrypt.setPrivateKey(document.getElementById(privkey).value);
+        decrypt.setPrivateKey(document.getElementById(privkey).innerHTML);
         var uncrypted = decrypt.decrypt(encrypted);// Decrypt with the private key...
-        if (uncrypted == document.getElementById(input).value) {console.log('It works!!!');}else {console.log('Something went wrong....');}// Now a simple check to see if the round-trip worked.
+        if (uncrypted == document.getElementById(input).innerHTML) {console.log('It works!!!');}else {console.log('Something went wrong....');}// Now a simple check to see if the round-trip worked.
         
         if (chiffrer) {
-            document.getElementById(input).innerHTML = `${encrypt.encrypt(document.getElementById(input).value)}`;
+            document.getElementById(input).innerHTML = `${encrypt.encrypt(document.getElementById(input).innerHTML)}`;
         }else{
-            document.getElementById(input).innerHTML = `${decrypt.decrypt(document.getElementById(input).value)}`;
+            document.getElementById(input).innerHTML = `${decrypt.decrypt(document.getElementById(input).innerHTML)}`;
         }
     }
 </script>
