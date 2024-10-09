@@ -5,8 +5,8 @@
 </head>
 <body hidden>
     <!-- à Changer -->
-    <label for="pubkey">Public Key</label><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
-    <textarea id="pubkey" rows="15" cols="65" hidden>-----BEGIN PUBLIC KEY-----
+    <label for="pubkeyRed">Public Key</label><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+    <textarea id="pubkeyRed" rows="15" cols="65" hidden>-----BEGIN PUBLIC KEY-----
 MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAsnsWwp7qNrXklcRtLTSD
 5hIyJ00JjEp3tWhoFzD0Ah+yG3TqK7yNul443bEsl0HZ1CndzoXFgmxXs33ySVOT
 FnSi1yyF6GMw4Hpr1u1Evvd8hsAP9ezAny7f+GSSPL0mI8YwI2rCNm2UVWJvEWH+
@@ -24,5 +24,5 @@ r4Hi6tpqywdNYpbl2M8PKvON1hRt5MQ4PWXUBiHb7OFgxt6BHP7XxEZtXVxptgZn
 </html>
 <script>
     var encrypt = new JSEncrypt();
-    encrypt.setPublicKey(document.getElementById("pubkey").value);
+    encrypt.setPublicKey(document.getElementById("pubkeyRed").value);
 </script>

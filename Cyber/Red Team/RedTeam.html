@@ -19,9 +19,32 @@
         window.location.replace("https://raykesh-soneka.github.io/Portfolio/Le_Site_De_Raykesh");
     </script>
 </head>
-<body>
+<body id="inputBody">
     <h1>Bienvenue Dans la partie cyber</h1>
     <h3>patience c'est en cours</h3>
     <h4>merci</h4>
 </body>
 </html>
+<script>
+    Red_RSA("inputBody","pubkeyRed","privkeyRed")
+    function Red_RSA(input="input",pubkey="pubkey",privkey="privkey", chiffrer=true) {
+        //Prototype de Chiffrement RSA 
+        // import * as nom from "http://code.jquery.com/jquery-1.8.3.min.js";
+        // import * as nom2 from "jsencrypt.min.js";
+        // <script src="http://code.jquery.com/jquery-1.8.3.min.js"></ script>
+        // <script src="jsencrypt.min.js"></ script>
+        var encrypt = new JSEncrypt();
+        encrypt.setPublicKey(document.getElementById(pubkey).value);
+        var encrypted = encrypt.encrypt(document.getElementById(input).value);// Encrypt with the public key...
+        var decrypt = new JSEncrypt();
+        decrypt.setPrivateKey(document.getElementById(privkey).value);
+        var uncrypted = decrypt.decrypt(encrypted);// Decrypt with the private key...
+        if (uncrypted == document.getElementById(input).value) {console.log('It works!!!');}else {console.log('Something went wrong....');}// Now a simple check to see if the round-trip worked.
+        
+        if (chiffrer) {
+            document.getElementById(input).innerHTML = `${encrypt.encrypt(document.getElementById(input).value)}`;
+        }else{
+            document.getElementById(input).innerHTML = `${decrypt.decrypt(document.getElementById(input).value)}`;
+        }
+    }
+</script>

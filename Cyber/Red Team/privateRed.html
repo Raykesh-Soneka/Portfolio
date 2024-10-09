@@ -5,8 +5,8 @@
 </head>
 <body hidden>
     <!-- à Changer -->
-    <label for="privkey">Private Key</label><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
-    <textarea id="privkey" rows="15" cols="65" hidden>-----BEGIN RSA PRIVATE KEY-----
+    <label for="privkeyRed">Private Key</label><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+    <textarea id="privkeyRed" rows="15" cols="65" hidden>-----BEGIN RSA PRIVATE KEY-----
 MIIJKAIBAAKCAgEAsnsWwp7qNrXklcRtLTSD5hIyJ00JjEp3tWhoFzD0Ah+yG3Tq
 K7yNul443bEsl0HZ1CndzoXFgmxXs33ySVOTFnSi1yyF6GMw4Hpr1u1Evvd8hsAP
 9ezAny7f+GSSPL0mI8YwI2rCNm2UVWJvEWH+zQOz02WAyvbE1zLr8aKAHHee2ubs
@@ -62,5 +62,5 @@ TorF6nZnPs9OdccHM4DIa4UdtsLBh86nzjwr0GlvPWfCf9Bs1AQmuuqQuDk=
 </html>
 <script>
     var decrypt = new JSEncrypt();
-    decrypt.setPrivateKey(document.getElementById("privkey").value);
+    decrypt.setPrivateKey(document.getElementById("privkeyRed").value);
 </script>
