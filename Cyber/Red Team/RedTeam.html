@@ -31,11 +31,17 @@
 </body>
 </html>
 <script src="../jsencrypt.min.js"></script>
+<script type="module" src="./privateRed.js"></script>
+<script type="module" src="./publicRed.js"></script>
 <script>
     console.log(" Red Team Part ")
-    import * as nom from "publicRed.js"
-    import * as nom2 from "privateRed.js"
-    Red_RSA("inputBody", nom.pubkeyRed, nom2.privkeyRed)
+    // import * as nom from "./publicRed.js"
+    // console.log(nom)
+    // import * as nom2 from "./privateRed.js"
+    // console.log(nom2)
+    // import { pubkeyRed } from "./publicRed.js";
+    // import { privkeyRed } from "./privateRed.js";
+    Red_RSA("inputBody", pubkeyRed, privkeyRed)
     function Red_RSA(input="input",pubkey="pubkey",privkey="privkey", chiffrer=true) {
         //Prototype de Chiffrement RSA 
         // import * as nom from "http://code.jquery.com/jquery-1.8.3.min.js";

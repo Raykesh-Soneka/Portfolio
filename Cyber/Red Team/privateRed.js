@@ -2,7 +2,7 @@
 // var decrypt = new JSEncrypt();
 // // decrypt.setPrivateKey(document.getElementById("privkeyRed").value);
 // decrypt.setPrivateKey
-privkeyRed=("-----BEGIN RSA PRIVATE KEY-----\n"+
+var privkeyRed=("-----BEGIN RSA PRIVATE KEY-----\n"+
 "MIIJKAIBAAKCAgEAsnsWwp7qNrXklcRtLTSD5hIyJ00JjEp3tWhoFzD0Ah+yG3Tq\n"+
 "K7yNul443bEsl0HZ1CndzoXFgmxXs33ySVOTFnSi1yyF6GMw4Hpr1u1Evvd8hsAP\n"+
 "9ezAny7f+GSSPL0mI8YwI2rCNm2UVWJvEWH+zQOz02WAyvbE1zLr8aKAHHee2ubs\n"+
