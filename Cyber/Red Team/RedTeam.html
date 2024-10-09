@@ -17,24 +17,6 @@
         console.log(" Le titre de la page est : " + document.title);
         console.log( page );
         // window.location.replace("https://raykesh-soneka.github.io/Portfolio/Le_Site_De_Raykesh");
-        function htmlInclusion() {
-          var z, i, elmnt, file, xhttp;
-          z = document.getElementsByTagName("*");
-          for (i = 0; i < z.length; i++) {
-            elmnt = z[i];file = elmnt.getAttribute("html_Inclusion");
-            if (file) {
-              xhttp = new XMLHttpRequest();/* Lance une requête http et récupère la valeur html_Inclusion */
-              xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                  elmnt.removeAttribute("html_Inclusion");htmlInclusion();
-                }
-              }
-              xhttp.open("GET", file, true);xhttp.send();return;
-            }
-          }
-        }
     </script>
 </head>
 <body>
@@ -43,27 +25,22 @@
         <h3>patience c'est en cours</h3>
         <h4>merci</h4>
     </div>
-    <!-- <iframe src="privateRed.html" frameborder="0"></iframe>
-    <iframe src="publicRed.html" frameborder="10"></iframe> -->
-    <div >
-        <div html_Inclusion="privateRed.html"></div>
-        <script>htmlInclusion();</script>
-        <div html_Inclusion="publicRed.html"></div>
-        <script>htmlInclusion();</script>
-    </div>
+    <iframe src="privateRed.html" frameborder="0"></iframe>
+    <iframe src="publicRed.html" frameborder="10"></iframe>
+
 </body>
 </html>
 <script src="../jsencrypt.min.js"></script>
 <script>
     console.log(" Red Team Part ")
-    htmlInclusion()
     Red_RSA("inputBody","pubkeyRed","privkeyRed")
     function Red_RSA(input="input",pubkey="pubkey",privkey="privkey", chiffrer=true) {
         //Prototype de Chiffrement RSA 
         // import * as nom from "http://code.jquery.com/jquery-1.8.3.min.js";
-        // import * as nom2 from "jsencrypt.min.js";
+        // import * as nom2 from "../jsencrypt.min.js";
         // <script src="http://code.jquery.com/jquery-1.8.3.min.js"></ script>
         // <script src="jsencrypt.min.js"></ script>
+        console.log(" Red Team Part : Red_RSA started")
         var encrypt = new JSEncrypt();
         encrypt.setPublicKey(document.getElementById(pubkey).innerHTML);
         var encrypted = encrypt.encrypt(document.getElementById(input).innerHTML);// Encrypt with the public key...
