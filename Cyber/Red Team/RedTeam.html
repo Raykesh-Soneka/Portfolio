@@ -33,7 +33,9 @@
 <script src="../jsencrypt.min.js"></script>
 <script>
     console.log(" Red Team Part ")
-    Red_RSA("inputBody","pubkeyRed","privkeyRed")
+    import * as nom from "publicRed.js"
+    import * as nom2 from "privateRed.js"
+    Red_RSA("inputBody", nom.pubkeyRed, nom2.privkeyRed)
     function Red_RSA(input="input",pubkey="pubkey",privkey="privkey", chiffrer=true) {
         //Prototype de Chiffrement RSA 
         // import * as nom from "http://code.jquery.com/jquery-1.8.3.min.js";
@@ -42,10 +44,10 @@
         // <script src="jsencrypt.min.js"></ script>
         console.log(" Red Team Part : Red_RSA started")
         var encrypt = new JSEncrypt();
-        encrypt.setPublicKey(document.getElementById(pubkey).innerHTML);
+        encrypt.setPublicKey(pubkey);
         var encrypted = encrypt.encrypt(document.getElementById(input).innerHTML);// Encrypt with the public key...
         var decrypt = new JSEncrypt();
-        decrypt.setPrivateKey(document.getElementById(privkey).innerHTML);
+        decrypt.setPrivateKey(privkey);
         var uncrypted = decrypt.decrypt(encrypted);// Decrypt with the private key...
         if (uncrypted == document.getElementById(input).innerHTML) {console.log('It works!!!');}else {console.log('Something went wrong....');}// Now a simple check to see if the round-trip worked.
         

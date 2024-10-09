@@ -1,6 +1,7 @@
-import * as nom2 from "../jsencrypt.min.js";
-var encrypt = new JSEncrypt();
-encrypt.setPublicKey("-----BEGIN PUBLIC KEY-----\n"+
+// import * as nom2 from "../jsencrypt.min.js";
+// var encrypt = new JSEncrypt();
+// encrypt.setPublicKey
+pubkeyRed=("-----BEGIN PUBLIC KEY-----\n"+
 "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAsnsWwp7qNrXklcRtLTSD\n"+
 "5hIyJ00JjEp3tWhoFzD0Ah+yG3TqK7yNul443bEsl0HZ1CndzoXFgmxXs33ySVOT\n"+
 "FnSi1yyF6GMw4Hpr1u1Evvd8hsAP9ezAny7f+GSSPL0mI8YwI2rCNm2UVWJvEWH+\n"+
