@@ -23,6 +23,8 @@
     <h1>Bienvenue Dans la partie cyber</h1>
     <h3>patience c'est en cours</h3>
     <h4>merci</h4>
+    <iframe src="privateRed.html" frameborder="0"></iframe>
+    <iframe src="publicRed.html" frameborder="10"></iframe>
 </body>
 </html>
 <script src="../jsencrypt.min.js"></script>
@@ -49,4 +51,22 @@
             document.getElementById(input).innerHTML = `${decrypt.decrypt(document.getElementById(input).innerHTML)}`;
         }
     }
+    function htmlInclusion() {
+          var z, i, elmnt, file, xhttp;
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];file = elmnt.getAttribute("html_Inclusion");
+            if (file) {
+              xhttp = new XMLHttpRequest();/* Lance une requête http et récupère la valeur html_Inclusion */
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  elmnt.removeAttribute("html_Inclusion");htmlInclusion();
+                }
+              }
+              xhttp.open("GET", file, true);xhttp.send();return;
+            }
+          }
+        }
 </script>
