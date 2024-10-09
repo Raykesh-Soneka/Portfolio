@@ -19,21 +19,26 @@
         // window.location.replace("https://raykesh-soneka.github.io/Portfolio/Le_Site_De_Raykesh");
     </script>
 </head>
-<body id="inputBody">
-    <h1>Bienvenue Dans la partie cyber</h1>
-    <h3>patience c'est en cours</h3>
-    <h4>merci</h4>
+<body>
+    <div  id="inputBody">
+        <h1>Bienvenue Dans la partie cyber</h1>
+        <h3>patience c'est en cours</h3>
+        <h4>merci</h4>
+    </div>
     <!-- <iframe src="privateRed.html" frameborder="0"></iframe>
     <iframe src="publicRed.html" frameborder="10"></iframe> -->
-    <div html_Inclusion="privateRed.html"></div>
-    <script>htmlInclusion();</script>
-    <div html_Inclusion="publicRed.html"></div>
-    <script>htmlInclusion();</script>
+    <div >
+        <div html_Inclusion="privateRed.html"></div>
+        <script>htmlInclusion();</script>
+        <div html_Inclusion="publicRed.html"></div>
+        <script>htmlInclusion();</script>
+    </div>
 </body>
 </html>
 <script src="../jsencrypt.min.js"></script>
 <script>
     console.log(" Red Team Part ")
+    htmlInclusion()
     Red_RSA("inputBody","pubkeyRed","privkeyRed")
     function Red_RSA(input="input",pubkey="pubkey",privkey="privkey", chiffrer=true) {
         //Prototype de Chiffrement RSA 
