@@ -6,21 +6,31 @@ console.log("test");
 // import * as nom2 from "jsencrypt.min.js";
 
 
-$(function() {
-    // Call this code when the page is done loading.
-    $('#testme').click(function() {// Run a quick encryption/decryption when they click.
+// $(function() {
+//     // Call this code when the page is done loading.
+//     $('#testme').click(function() {// Run a quick encryption/decryption when they click.
+//     var encrypt = new JSEncrypt();
+//     encrypt.setPublicKey($('#pubkey').val());
+//     // var encrypted = encrypt.encrypt($('#input').val());// Encrypt with the public key...
+//     var decrypt = new JSEncrypt();
+//     decrypt.setPrivateKey($('#privkey').val());
+//     // var uncrypted = decrypt.decrypt(encrypted);// Decrypt with the private key...
+//     // if (uncrypted == $('#input').val()) {console.log('It works!!!');}else {console.log('Something went wrong....');}// Now a simple check to see if the round-trip worked.
+//     document.getElementById("input").innerHTML = `${decrypt.decrypt($('#input').val())}`;
+//     });
+// });
+
+function testInput_RSA() {
+    //Chiffrement RSA 
     var encrypt = new JSEncrypt();
-    encrypt.setPublicKey($('#pubkey').val());
+    encrypt.setPublicKey(document.getElementById("pubkey").value);
     // var encrypted = encrypt.encrypt($('#input').val());// Encrypt with the public key...
     var decrypt = new JSEncrypt();
-    decrypt.setPrivateKey($('#privkey').val());
+    decrypt.setPrivateKey(document.getElementById("privkey").value);
     // var uncrypted = decrypt.decrypt(encrypted);// Decrypt with the private key...
     // if (uncrypted == $('#input').val()) {console.log('It works!!!');}else {console.log('Something went wrong....');}// Now a simple check to see if the round-trip worked.
-    document.getElementById("input").innerHTML = `${decrypt.decrypt($('#input').val())}`;
-    });
-});
-
-
+    document.getElementById("input").innerHTML = `${decrypt.decrypt(document.getElementById("input").value)}`;
+}
 
 console.log("test2");
 function testInput_F2() {
