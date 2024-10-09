@@ -22,7 +22,9 @@ r4Hi6tpqywdNYpbl2M8PKvON1hRt5MQ4PWXUBiHb7OFgxt6BHP7XxEZtXVxptgZn
 -----END PUBLIC KEY-----</textarea><br/>
 </body>
 </html>
+<script src="../jsencrypt.min.js"></script>
 <script>
     var encrypt = new JSEncrypt();
     encrypt.setPublicKey(document.getElementById("pubkeyRed").value);
+    console.log(document.getElementById("pubkeyRed").value)
 </script>
