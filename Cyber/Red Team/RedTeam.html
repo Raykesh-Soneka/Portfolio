@@ -96,5 +96,21 @@
             document.getElementById(input).innerHTML = `${decrypt.decrypt(document.getElementById(input).innerHTML)}`;
         }
     }
-    
+
+
+
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+    async function MaFonctionQuiAttend() {
+        await delay(1000);
+        console.log("Waited 1s");
+        await delay(1000);
+        console.log("Waited 2s");
+        await delay(1000);
+        console.log("Waited 3s");
+        await delay(1000);
+        console.log("Waited 4s");
+        await delay(1000);
+        console.log("Waited 5s");
+    };
+    MaFonctionQuiAttend()
 </script>
