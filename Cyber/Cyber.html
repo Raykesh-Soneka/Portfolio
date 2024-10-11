@@ -205,17 +205,17 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         Texte/text chiffré  : 5RLM\<br>
         <div><br>
 
-            <input type="text" id="inputT" placeholder="Entrer le Texte" value="Texte"><br>
-            <input type="text" id="inputM" placeholder="Entrer le MDP" value="Test"><br>
+            <input type="text" id="inputT" placeholder="Entrer le Texte" value="Texte"  title=" Texte "><br>
+            <input type="text" id="inputM" placeholder="Entrer le MDP" value="Test"  title=" MDP "><br>
             Cryptage (on préféra le terme chiffrage/chiffrement) : <br>
 
-            <button onclick="testInputC()">Chiffrer</button><br>
-            <div id="outputC">Texte Chiffrer</div><br>
+            <button onclick="testInputC()" title=" 🤔, indice il faut cliquez. je ne pensais pas que c'était une énigmes. ">Chiffrer</button><br>
+            <div id="outputC" title=" 🤔, Texte chiffrée. ré-utilisée l'algorithme pour déchiffré ">Texte Chiffrer</div><br>
         </div>
         
         déchiffrage : <br>
         
-        <button onclick="testInputD()">Déchiffrer</button><br>
+        <button onclick="testInputD()" title=" 🤔, indice il faut cliquez. je ne pensais pas que c'était une énigmes. ">Déchiffrer</button><br>
         <div id="outputD">Texte Déhiffré</div><br>
         On remarquera que le chiffrage et le déchiffrage utilisent une même fonction, en plus d'être simples pour l'instant.
         On pourra voir une version plus sophistiquée par la suite, qui part du même principe mais avec plusieurs couches imbriquées.
@@ -240,7 +240,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
             test ==> <br>
             
             <span id="outputCesarSpe"><span id="outputCesar0"></span><span id="outputCesar">Texte</span></span><br>
-            <button onclick="testInputCesar2('inputMCesar','outputCesarSpe')">déhiffrer</button><br>
+            <button onclick="testInputCesar2('inputMCesar','outputCesarSpe')" title=" Utilisent le Chiffrement de césar pour déhiffrer le texte avec le décallage fourni ... ">déhiffrer</button><br>
             Décryptée : <div id="outputCesar2" style="display: inline">Texte</div><br>
         </div>
         <br>
@@ -249,7 +249,7 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
           Chiffrement de césar : <br>
             <input type="number" id="inputMCesar_2" placeholder="Entrer le MDP (nombre de décallage)" value="1"><br>
             <input type="text" id="inputT_2" placeholder="Entrer le Texte" value="Texte_TesteCesar_2abcABC"><br>
-            <button onclick="testInputCesar_3('inputMCesar_2','inputT_2')">Chiffrer</button><br>
+            <button onclick="testInputCesar_3('inputMCesar_2','inputT_2')" title=" 🔐🔑🔒🔓, indice il faut cliquez.">Chiffrer</button><br>
             test ==> <br>
             
             <span id="outputCesarSpe_2"><span id="outputCesar0_2"></span><span id="outputCesar_2">Texte</span></span><br>
@@ -449,7 +449,7 @@ r4Hi6tpqywdNYpbl2M8PKvON1hRt5MQ4PWXUBiHb7OFgxt6BHP7XxEZtXVxptgZn
             .join("");
             console.log(`CesarStr : ${CesarStr}|`);
             document.getElementById("TestTexteArea").innerHTML = `${CesarStr}`;
-
+            console.log(`Fin : ${CesarStr}|`);
             return CesarStr
 
         }
@@ -528,16 +528,16 @@ r4Hi6tpqywdNYpbl2M8PKvON1hRt5MQ4PWXUBiHb7OFgxt6BHP7XxEZtXVxptgZn
             var result = "";
             for (var i = 0; i < text.length; i++) {
             var charIndex = arrayCharset.indexOf(text[i]);
-            console.log(` charIndex : ${charIndex} | i=${i} | ${text[i]}`);
+            if(_debug){console.log(` charIndex : ${charIndex} | i=${i} | ${text[i]}`);}
             if (charIndex !== -1) {
                 var newIndex = (charIndex +arrayCharset.length+ shift) % arrayCharset.length; // indice de la lettre décaller
                 var _R = 1;
                 while (arrayCharset.indexOf(arrayCharset[newIndex])=== -1 || arrayCharset.indexOf(arrayCharset[newIndex])=== NaN){
                 var newIndex = (charIndex +arrayCharset.length+ shift + _R++) % arrayCharset.length;
-                console.log(` _R : ${_R}`);
+                if(_debug){console.log(` _R : ${_R}`);}
                 }
-                console.log(` _R : ${_R}`);
-                console.log(` arrayCharset.indexOf(arrayCharset[newIndex]) : ${arrayCharset.indexOf(arrayCharset[newIndex])}   | ${(arrayCharset[newIndex])}`);
+                if(_debug){console.log(` _R : ${_R}`);}
+                if(_debug){console.log(` arrayCharset.indexOf(arrayCharset[newIndex]) : ${arrayCharset.indexOf(arrayCharset[newIndex])}   | ${(arrayCharset[newIndex])}`);}
                 if (newIndex === -0) {newIndex=+0;console.log("bug -0");console.log(newIndex)} // bug -0
                 result += arrayCharset[newIndex];
             } else {
