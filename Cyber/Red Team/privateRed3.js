@@ -1,8 +1,4 @@
-// import * as nom2 from "../jsencrypt.min.js";
-// var decrypt = new JSEncrypt();
-// // decrypt.setPrivateKey(document.getElementById("privkeyRed").value);
-// decrypt.setPrivateKey
-var privkeyRed2=("-----BEGIN RSA PRIVATE KEY-----\n"+
+var privkeyRed3=("-----BEGIN RSA PRIVATE KEY-----\n"+
 "MIIJKAIBAAKCAgEAsnsWwp7qNrXklcRtLTSD5hIyJ00JjEp3tWhoFzD0Ah+yG3Tq\n"+
 "K7yNul443bEsl0HZ1CndzoXFgmxXs33ySVOTFnSi1yyF6GMw4Hpr1u1Evvd8hsAP\n"+
 "9ezAny7f+GSSPL0mI8YwI2rCNm2UVWJvEWH+zQOz02WAyvbE1zLr8aKAHHee2ubs\n"+
