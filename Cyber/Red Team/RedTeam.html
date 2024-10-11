@@ -20,7 +20,7 @@
     </script>
 </head>
 <body>
-    <div class="beginng">
+    <div class="beginng" id="beginng">
 
         <div  id="inputBody">
             oB7po27c3zzIVfnA/0YprTQIlRnMBgGoL8MtmBEYzH0O4waAxCoIwEPgO8MzQb1WsOfocWLiirVQbqEOK8L0R1rNvsHoLfaqcvs21wMBTeXZGSHWt+8qaDXuke4pVu5ORP1VfzL5pmlzh3nOWwO+YZuisWWOF1oqL4CMd6XOPi875itsRoCbuXr29Yh2JjCX5FXcANFldG89Yrmza2HRu8rHRONYOw3ELBBQsvTEGZhvQgTzxCr17FgCQKInzoybs+rTjfWIy9QPu/EqmD9+MTZM7yFp50bXBNgmRBDw2Is3gYV3yMG555fTV4pY2TSdyUGUx2PiWWJCr11zEPvcgQocKnJ2sZlQoV1DcxhY5AfVPMgDL317h0WQMVq2CDAC02SqxyS/QQohTlW5NGvbqWEbCF5v9LjsQ4ccZIQzaXXUH8lIyDSePoeuX2f9Fg5Zu75xysZQVyMSl8sFtq5QE7RoBpIIT9Zl8UfNrbCSmfK0l9oGqsBKwil5ou/QWkfR5HOTmS8UU5b9FvuTNKYM5tMoszzUFI2Cys71IFCX1tJvV3JAUosvDnLT3miEwUzvSpTrfn07lvRO5Q8yvIDCkaw4vOAhmh/r1dw5MoYpV9AUwGntTCEUe/jB4bppnD9muDqd1DClc3i1sHp4UzdcARXdUys8DRACZr/lQhWRJ5I=
@@ -114,8 +114,10 @@
         console.log("Waited 5s");
         await delay(5000);
         console.log("Waited 10s");
-        let beginng = document.getElementsByClassName("beginng")
-        beginng.style.display = 'none';
+        var beginng = document.getElementsByClassName("beginng")[0].style.display = 'none';
+        // $(".beginng").hide();
+        // var beginng = document.getElementById("beginng").style.display = 'none';
+        // $("#beginng").hide();
     };
     MaFonctionPrincipaleQuiAttend()
 </script>
