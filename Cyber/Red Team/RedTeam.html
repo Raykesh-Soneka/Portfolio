@@ -114,29 +114,29 @@
 <script src="./publicRed3.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script>
-    console.log(" Red Team Part ")
+    console.log(" Red Team Part ");
     // import * as nom from "./publicRed.js"
     // console.log(nom)
     // import * as nom2 from "./privateRed.js"
     // console.log(nom2)
     // import { pubkeyRed } from "./publicRed.js";
     // import { privkeyRed } from "./privateRed.js";
-    Red_RSA("inputBody", pubkeyRed, privkeyRed,false)
-    Red_RSA("inputBody2", pubkeyRed2, privkeyRed2,true)
-    Red_RSA("inputBody2.0", pubkeyRed2, privkeyRed2,false)
-    Red_RSA("inputBody2.1", pubkeyRed2, privkeyRed2,false)
-    Red_RSA("inputBody2.2", pubkeyRed2, privkeyRed2,false)
-    Red_RSA("inputBody2.3", pubkeyRed2, privkeyRed2,false)
-    Red_RSA("inputBody2.4", pubkeyRed2, privkeyRed2,false)
-    Red_RSA("inputBody2.5", pubkeyRed2, privkeyRed2,false)
-    Red_RSA("inputBody2.6", pubkeyRed2, privkeyRed2,false)
+    Red_RSA("inputBody", pubkeyRed, privkeyRed,false);
+    Red_RSA("inputBody2", pubkeyRed2, privkeyRed2,true);
+    Red_RSA("inputBody2.0", pubkeyRed2, privkeyRed2,false);
+    Red_RSA("inputBody2.1", pubkeyRed2, privkeyRed2,false);
+    Red_RSA("inputBody2.2", pubkeyRed2, privkeyRed2,false);
+    Red_RSA("inputBody2.3", pubkeyRed2, privkeyRed2,false);
+    Red_RSA("inputBody2.4", pubkeyRed2, privkeyRed2,false);
+    Red_RSA("inputBody2.5", pubkeyRed2, privkeyRed2,false);
+    Red_RSA("inputBody2.6", pubkeyRed2, privkeyRed2,false);
     function Red_RSA(input="input",pubkey="pubkey",privkey="privkey", chiffrer=true) {
         //Prototype de Chiffrement RSA 
         // import * as nom from "http://code.jquery.com/jquery-1.8.3.min.js";
         // import * as nom2 from "../jsencrypt.min.js";
         // <script src="http://code.jquery.com/jquery-1.8.3.min.js"></ script>
         // <script src="jsencrypt.min.js"></ script>
-        console.log(" Red Team Part : Red_RSA started")
+        console.log(" Red Team Part : Red_RSA started");
         var encrypt = new JSEncrypt();
         encrypt.setPublicKey(pubkey);
         var encrypted = encrypt.encrypt(document.getElementById(input).innerHTML);// Encrypt with the public key...
@@ -173,24 +173,24 @@
         // $("#beginng").hide();
         await delay(1000*_debug_Speed);
         var beginng = document.getElementsByClassName("beginng2TheMain")[0].style.display = 'block';
-        Red_RSA("inputBody3", pubkeyRed2, privkeyRed2,false)
-        Red_RSA("inputBody3.001", pubkeyRed2, privkeyRed2,false)
-        Red_RSA("inputBody3.002", pubkeyRed2, privkeyRed2,false)
-        Red_RSA("inputBody3.003", pubkeyRed2, privkeyRed2,false)
-        Red_RSA("inputBody3.010", pubkeyRed2, privkeyRed2,false)
-        Red_RSA("inputBody3.011", pubkeyRed2, privkeyRed2,false)
-        Red_RSA("inputBody3.012", pubkeyRed2, privkeyRed2,false)
-        Red_RSA("inputBody3.013", pubkeyRed2, privkeyRed2,false)
-        Red_RSA("inputBody3.014", pubkeyRed2, privkeyRed2,false)
-        Red_RSA("inputBody3.015", pubkeyRed2, privkeyRed2,false)
-        Red_RSA("inputBody3.016", pubkeyRed2, privkeyRed2,false)
-        Red_RSA("inputBody3.017", pubkeyRed2, privkeyRed2,false)
-        Red_RSA("inputBody3.018", pubkeyRed2, privkeyRed2,false)
-        Red_RSA("inputBody3.019", pubkeyRed2, privkeyRed2,false)
-        Red_RSA("inputBody3.020", pubkeyRed2, privkeyRed2,false)
+        Red_RSA("inputBody3", pubkeyRed2, privkeyRed2,false);
+        Red_RSA("inputBody3.001", pubkeyRed2, privkeyRed2,false);
+        Red_RSA("inputBody3.002", pubkeyRed2, privkeyRed2,false);
+        Red_RSA("inputBody3.003", pubkeyRed2, privkeyRed2,false);
+        Red_RSA("inputBody3.010", pubkeyRed2, privkeyRed2,false);
+        Red_RSA("inputBody3.011", pubkeyRed2, privkeyRed2,false);
+        Red_RSA("inputBody3.012", pubkeyRed2, privkeyRed2,false);
+        Red_RSA("inputBody3.013", pubkeyRed2, privkeyRed2,false);
+        Red_RSA("inputBody3.014", pubkeyRed2, privkeyRed2,false);
+        Red_RSA("inputBody3.015", pubkeyRed2, privkeyRed2,false);
+        Red_RSA("inputBody3.016", pubkeyRed2, privkeyRed2,false);
+        Red_RSA("inputBody3.017", pubkeyRed2, privkeyRed2,false);
+        Red_RSA("inputBody3.018", pubkeyRed2, privkeyRed2,false);
+        Red_RSA("inputBody3.019", pubkeyRed2, privkeyRed2,false);
+        Red_RSA("inputBody3.020", pubkeyRed2, privkeyRed2,false);
         await delay(5000*_debug_Speed);
-        Red_RSA("inputBody3.021", pubkeyRed3, privkeyRed3,false)
-        // Red_RSA("inputBody3.022", pubkeyRed3, privkeyRed3,true)
+        Red_RSA("inputBody3.021", pubkeyRed3, privkeyRed3,false);
+        // Red_RSA("inputBody3.022", pubkeyRed3, privkeyRed3,true);
     };
     MaFonctionPrincipaleQuiAttend()
 </script>
