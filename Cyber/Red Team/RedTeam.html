@@ -225,7 +225,7 @@
     const delay = ms => new Promise(res => setTimeout(res, ms));
     async function MaFonctionPrincipaleQuiAttend() {
         // main  
-        var _debug_Speed = 1; // Set to 1
+        var _debug_Speed = 0.01; // Set to 1
         await delay(1000*_debug_Speed);
         console.log("Waited 1s");
         await delay(1500*_debug_Speed);
@@ -280,13 +280,14 @@
         Red_RSA("inputBody3.031", pubkeyRed3, privkeyRed3,false);
         Red_RSA("inputBody3.032", pubkeyRed3, privkeyRed3,false);
         Red_RSA("inputBody3.033", pubkeyRed3, privkeyRed3,false);
-        // Red_RSA("inputBody3.035", pubkeyRed3, privkeyRed3,true);
         
         document.getElementsByClassName("ContentBody3.034")[0].hidden = false;
         await delay(5000*_debug_Speed);
         document.getElementsByClassName("ContentBody3.034")[0].innerText='';
         
         
+        Red_RSA("inputBody3.035", pubkeyRed3, privkeyRed3,true);
+        // Red_RSA("inputBody3.036", pubkeyRed3, privkeyRed3,true);
         
         
         
