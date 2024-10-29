@@ -16,6 +16,13 @@ if __debug:
         print([__debug_f(s) for s in [Lettre, Espace, nombre, hexa, octa, ponctuation, tout]])
 
 Charset : string = tout
+if __debug and ___debug > 8:print(len(Charset))
+#ici le charset est plutôt court (100 caractères)
+
+
+
+
+
 
 
 if __debug:
