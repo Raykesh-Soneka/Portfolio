@@ -18,7 +18,7 @@ if __debug:
 Charset : string = tout
 if __debug and ___debug > 8:print(len(Charset))
 #ici le charset est plutôt court (100 caractères)
-
+#Il faut modifier le code pour pouvoir avoir un plus grand charset (avec utf8 mais ces caractère ne sont pas pris TOUJOURS en charge)
 
 
 
