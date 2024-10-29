@@ -1,5 +1,6 @@
 import string,secrets
 
+__debug = False
 Lettre = string.ascii_letters
 Espace = string.whitespace
 nombre = string.digits
