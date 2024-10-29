@@ -9,7 +9,7 @@ octa = string.octdigits
 ponctuation = string.punctuation
 tout = string.printable
 if __debug:
-    ___debug : int = 10 # Niveau de debogage ∈ [0 ; 10]
+    ___debug : int = 10 # Niveau de debogage ___debug ∈ [0 ; 10]
     print(string.__doc__)
     if ___debug > 8 :
         def __debug_f( s : string ) -> string :print('['+s+']');return s
