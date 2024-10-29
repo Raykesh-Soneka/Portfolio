@@ -1,8 +1,8 @@
 import string,secrets
 
-Lettre_minuscule = string.ascii_letters
+Lettre = string.ascii_letters
 
-Charset : string = Lettre_minuscule
+Charset : string = Lettre
 
 
 
