@@ -8,8 +8,9 @@ hexa = string.hexdigits
 octa = string.octdigits
 ponctuation = string.punctuation
 tout = string.printable
-print(string.__doc__)
-print(['\n'+s for s in [Lettre, Espace, nombre, hexa, octa, ponctuation, tout]])
+if __debug:
+    print(string.__doc__)
+    print([print('['+s+']') for s in [Lettre, Espace, nombre, hexa, octa, ponctuation, tout]])
 
 Charset : string = Lettre
 
