@@ -1,6 +1,6 @@
 import string,secrets
 
-__debug = False
+__debug = True
 Lettre = string.ascii_letters
 Espace = string.whitespace
 nombre = string.digits
@@ -10,7 +10,7 @@ ponctuation = string.punctuation
 tout = string.printable
 if __debug:
     print(string.__doc__)
-    print([print('['+s+']') for s in [Lettre, Espace, nombre, hexa, octa, ponctuation, tout]])
+    [print('['+s+']') for s in [Lettre, Espace, nombre, hexa, octa, ponctuation, tout]]
 
 Charset : string = tout
 
