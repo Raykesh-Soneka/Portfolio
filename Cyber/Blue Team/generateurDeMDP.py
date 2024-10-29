@@ -12,7 +12,7 @@ if __debug:
     print(string.__doc__)
     print([print('['+s+']') for s in [Lettre, Espace, nombre, hexa, octa, ponctuation, tout]])
 
-Charset : string = Lettre
+Charset : string = tout
 
 
 
