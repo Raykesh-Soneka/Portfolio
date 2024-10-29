@@ -15,5 +15,5 @@ if __debug:
 Charset : string = tout
 
 
-
-print(Charset)
+if __debug:
+    print(Charset)
