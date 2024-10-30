@@ -15,7 +15,8 @@ if __debug:
         def __debug_f( s : string ) -> string :print('['+s+']');return s
         print([__debug_f(s) for s in [Lettre, Espace, nombre, hexa, octa, ponctuation, tout]])
 
-Charset : string = tout
+# Charset : string = tout
+Charset : string = Lettre + nombre + ponctuation
 if __debug and ___debug > 8:print(len(Charset))
 #ici le charset est plutôt court (100 caractères)
 #Il faut modifier le code pour pouvoir avoir un plus grand charset (avec utf8 mais ces caractère ne sont pas pris TOUJOURS en charge)
