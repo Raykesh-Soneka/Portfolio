@@ -24,6 +24,8 @@ def generateurDeMotsDePasse(n : int = 0 , Charset : string = Charset ) -> None:
     while n is None or n == 0:
         int(input(" Entrer le Nombre de caractère (longueur) pour génèré un mots de passe : "))
     MDP : string = ""
+    for i in range(n):MDP += secrets.choice(Charset)
+    
 
 
 
