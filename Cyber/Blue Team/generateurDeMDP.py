@@ -24,9 +24,10 @@ if __debug and ___debug > 8:print(len(Charset))
 def generateurDeMotsDePasse(n : int = 0 , Charset : string = Charset ) -> None:
     if n == 0:
         int(input(" Entrer le Nombre de caractère (longueur) pour génèré un mots de passe : "))
-    MDP : string = ""
-    for i in range(n):MDP += secrets.choice(Charset)
-    return MDP
+    # MDP : string = ""
+    # for i in range(n):MDP += secrets.choice(Charset)
+    # return MDP
+    return "".join(secrets.choice(Charset) for i in range(n))
 
 
 
