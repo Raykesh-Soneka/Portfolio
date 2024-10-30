@@ -22,7 +22,9 @@ if __debug and ___debug > 8:print(len(Charset))
 #Il faut modifier le code pour pouvoir avoir un plus grand charset (avec utf8 mais ces caractère ne sont pas pris TOUJOURS en charge)
 
 def generateurDeMotsDePasse(n : int = 0 , Charset : string = Charset ) -> string:
-    if n == 0:n=int(input(" Entrer le Nombre de caractère (longueur) pour génèré un mots de passe : "))
+    while n is None or n == 0:
+        try:n=int(input(" Entrer le Nombre de caractère (longueur) pour génèré un mots de passe : "))
+        except ValueError as v:print("ValueError",v," Mettre seuelement un entier")
     # MDP : string = ""
     # for i in range(n):MDP += secrets.choice(Charset)
     # return MDP
@@ -35,3 +37,4 @@ if __debug:
     if ___debug > 7 :
         print(Charset)
     print(generateurDeMotsDePasse(50,Charset))
+    print(generateurDeMotsDePasse())
