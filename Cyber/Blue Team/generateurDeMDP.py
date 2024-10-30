@@ -33,3 +33,4 @@ def generateurDeMotsDePasse(n : int = 0 , Charset : string = Charset ) -> None:
 if __debug:
     if ___debug > 7 :
         print(Charset)
+    generateurDeMotsDePasse(10)
