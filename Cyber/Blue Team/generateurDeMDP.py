@@ -21,7 +21,7 @@ if __debug and ___debug > 8:print(len(Charset))
 #Il faut modifier le code pour pouvoir avoir un plus grand charset (avec utf8 mais ces caractère ne sont pas pris TOUJOURS en charge)
 
 def generateurDeMotsDePasse(n : int = 0 , Charset : string = Charset ) -> None:
-    while n is None or n == 0:
+    if n == 0:
         int(input(" Entrer le Nombre de caractère (longueur) pour génèré un mots de passe : "))
     MDP : string = ""
     for i in range(n):MDP += secrets.choice(Charset)
