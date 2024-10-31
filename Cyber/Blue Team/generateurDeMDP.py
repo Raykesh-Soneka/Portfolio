@@ -1,4 +1,4 @@
-import string,secrets
+import string,secrets,time
 from faker import Faker
 fake = Faker()
 
@@ -74,7 +74,7 @@ if __debug:
     print(c,'\n',generateurDePhraseDePasse(Charset=[i for i in fake.get_words_list()+WordList_fr if i.startswith('r') or i.startswith('R')]))
     print(c,'\n')
     for i in range(100):
-        print("\r"+generateurDePhraseDePasse(10,[i for i in fake.get_words_list()+WordList_fr if i.startswith('r') or i.startswith('R')],'R'),end="")
+        print("\r"+generateurDePhraseDePasse(10,[i for i in fake.get_words_list()+WordList_fr if i.startswith('r') or i.startswith('_')],'R'),end="");time.sleep(0.001*50)
     print('\n')
 
 # Bien sur c'est mots de passe sont « bruteforçable » mais avec une longueur suffisant est un charset varié cette opération peut être considéré impossible dans un laps de temps raisonnables.
