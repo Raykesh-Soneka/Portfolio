@@ -50,7 +50,7 @@ def generateurDePhraseDePasse(n : int = 0 , Charset : string = fake.get_words_li
         except ValueError as v:print("ValueError",v," Mettre seuelement un entier")
     # MDP : string = ""
     # for i in range(n):MDP += secrets.choice(Charset)+separateur
-    # return MDP
+    # return MDP[:-len(separateur)] if not separateurFinale and len(separateur)>0 else MDP
     return "".join(secrets.choice(Charset)+separateur for i in range(n))[:-len(separateur)] if not separateurFinale and len(separateur)>0 else "".join(secrets.choice(Charset)+separateur for i in range(n))
 
 
