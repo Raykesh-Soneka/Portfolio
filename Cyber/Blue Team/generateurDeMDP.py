@@ -43,14 +43,14 @@ def generateurDeMotsDePasse(n : int = 0 , Charset : string = Charset ) -> string
     # return MDP
     return "".join(secrets.choice(Charset) for i in range(n))
 
-def generateurDePhraseDePasse(n : int = 0 , Charset : string = fake.get_words_list(), separateur : string = "" ) -> string:
+def generateurDePhraseDePasse(n : int = 0 , Charset : string = fake.get_words_list(), separateur : string = "" , separateurFinale : bool = False ) -> string:
     while n is None or n == 0:
         try:n=int(input(" Entrer le Nombre de mots (longueur) pour génèré un mots de passe : "))
         except ValueError as v:print("ValueError",v," Mettre seuelement un entier")
     # MDP : string = ""
-    # for i in range(n):MDP += secrets.choice(Charset)
+    # for i in range(n):MDP += secrets.choice(Charset)+separateur
     # return MDP
-    return "".join(secrets.choice(Charset) for i in range(n))
+    return "".join(secrets.choice(Charset)+separateur for i in range(n))[:-len(separateur)] if not separateurFinale and len(separateur)>0 else "".join(secrets.choice(Charset)+separateur for i in range(n))
 
 
 if __debug:
@@ -63,4 +63,5 @@ if __debug:
     with open("Cyber\Blue Team\WordList_fr","r") as a :
         WordList_fr = [l[:-1] for l in a]
         if ___debug > 8 : print(WordList_fr)
+        print(generateurDePhraseDePasse(5,fake.get_words_list()+WordList_fr,','))
     # print(generateurDeMotsDePasse(),c)
