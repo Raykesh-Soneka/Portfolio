@@ -44,6 +44,7 @@ def generateurDeMotsDePasse(n : int = 0 , Charset : string = Charset ) -> string
     return "".join(secrets.choice(Charset) for i in range(n))
 
 def generateurDePhraseDePasse(n : int = 0 , Charset : string = fake.get_words_list(), separateur : string = "" , separateurFinale : bool = False ) -> string:
+    """ permet de générer une phrase de passe (utilise un pseudo-aléatoire cryptographiquement fort (secrets)) """
     while n is None or n == 0:
         try:n=int(input(" Entrer le Nombre de mots (longueur) pour génèré un mots de passe : "))
         except ValueError as v:print("ValueError",v," Mettre seuelement un entier")
