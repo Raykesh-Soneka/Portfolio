@@ -1,4 +1,7 @@
 import string,secrets
+from faker import Faker
+fake = Faker()
+
 
 c="""║                                                                                                    ║
 ║          .---------..---------..---------..---------..---------..---------..---------.             ║
@@ -42,9 +45,11 @@ def generateurDeMotsDePasse(n : int = 0 , Charset : string = Charset ) -> string
 
 
 
-
 if __debug:
     if ___debug > 7 :
         print(Charset)
     print(generateurDeMotsDePasse(50,Charset))
-    print(generateurDeMotsDePasse(),c)
+    print(generateurDeMotsDePasse(50,Charset))
+    print(generateurDeMotsDePasse(50,Charset))
+    if ___debug > 8 : print(fake.get_words_list())
+    # print(generateurDeMotsDePasse(),c)
