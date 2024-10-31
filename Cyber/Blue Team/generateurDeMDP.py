@@ -72,3 +72,4 @@ if __debug:
     # print(generateurDeMotsDePasse(),c)
 
 # Bien sur c'est mots de passe sont « bruteforçable » mais avec une longueur suffisant est un charset varié cette opération peut être considéré impossible dans un laps de temps raisonnables.
+# Vous pouvez aussi mélanger plusieurs méthodes pour complexifié le pattern des MDP.
