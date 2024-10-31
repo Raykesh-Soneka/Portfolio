@@ -64,5 +64,11 @@ if __debug:
     with open("Cyber\Blue Team\WordList_fr","r") as a :
         WordList_fr = [l[:-1] for l in a]
         if ___debug > 8 : print(WordList_fr)
+        if ___debug > 7 : print(len(WordList_fr)) # 22740
+        if ___debug > 7 : print(len(fake.get_words_list())) # 971
         print(generateurDePhraseDePasse(5,fake.get_words_list()+WordList_fr,','))
+        print(generateurDePhraseDePasse(10,WordList_fr,'.'))
+        print(generateurDePhraseDePasse(20,[i for i in WordList_fr if i.startswith('r') or i.startswith('R')],'.'))
     # print(generateurDeMotsDePasse(),c)
+
+# Bien sur c'est mots de passe sont « bruteforçable » mais avec une longueur suffisant est un charset varié cette opération peut être considéré impossible dans un laps de temps raisonnables.
