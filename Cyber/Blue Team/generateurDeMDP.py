@@ -53,6 +53,7 @@ def generateurDePhraseDePasse(n : int = 0 , Charset : string = fake.get_words_li
     return "".join(secrets.choice(Charset)+separateur for i in range(n))[:-len(separateur)] if not separateurFinale and len(separateur)>0 else "".join(secrets.choice(Charset)+separateur for i in range(n))
 
 
+
 if __debug:
     if ___debug > 7 :
         print(Charset)
