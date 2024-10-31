@@ -70,8 +70,8 @@ if __debug:
         print(generateurDePhraseDePasse(5,fake.get_words_list()+WordList_fr,','))
         print(generateurDePhraseDePasse(10,WordList_fr,'.'))
         print(generateurDePhraseDePasse(20,[i for i in WordList_fr if i.startswith('r') or i.startswith('R')],'.'))
-    print(generateurDeMotsDePasse(),c)
-    print(generateurDePhraseDePasse(Charset=[i for i in fake.get_words_list()+WordList_fr if i.startswith('r') or i.startswith('R')]),c)
+    print(c,'\n',generateurDeMotsDePasse())
+    print(c,'\n',generateurDePhraseDePasse(Charset=[i for i in fake.get_words_list()+WordList_fr if i.startswith('r') or i.startswith('R')]))
 
 # Bien sur c'est mots de passe sont « bruteforçable » mais avec une longueur suffisant est un charset varié cette opération peut être considéré impossible dans un laps de temps raisonnables.
 # Vous pouvez aussi mélanger plusieurs méthodes pour complexifié le pattern des MDP.
