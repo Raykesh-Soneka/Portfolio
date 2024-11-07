@@ -11,10 +11,8 @@ with open(Folder+"generateurDeMDP.py","r+b") as o :
         #     c.write(i)
         while True:
             morceaux = o.read(1024)  # lis des morceaux de 1024 octets
-            if not morceaux:
-                break
-            morceaux_chiffrer = xor_donnee(morceaux, key)  # appliquer le XOR
-            c.write(morceaux_chiffrer)
+            if not morceaux:break
+            c.write(xor_donnee(morceaux, key)  )  # appliquer le XOR / écrire ds le fichier
 
 with open(Folder+"generateurDeMDPChiffrer.py","r+b") as c :
     with open(Folder+"generateurDeMDPDéChiffrer.py",'x+b') as d :
@@ -22,7 +20,5 @@ with open(Folder+"generateurDeMDPChiffrer.py","r+b") as c :
         #     d.write(i)
         while True:
             morceaux = c.read(1024)  # lis des morceaux de taile 1024 octets
-            if not morceaux:
-                break
-            morceaux_chiffrer = xor_donnee(morceaux, key)  # appliquer le XOR
-            d.write(morceaux_chiffrer)
+            if not morceaux:break
+            d.write(xor_donnee(morceaux, key)  )  # appliquer le XOR / écrire ds le fichier
