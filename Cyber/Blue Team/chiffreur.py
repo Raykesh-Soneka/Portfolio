@@ -18,17 +18,19 @@ with open(Folder+"generateurDeMDP.py","r+b") as o :
 Texte:str=""
 ## Déchiffre le fichier chiffrer
 with open(Folder+"generateurDeMDPChiffrer.py","r+b") as c :
-    with open(Folder+"generateurDeMDPDéChiffrer.py",'x+b') as d :
+    # with open(Folder+"generateurDeMDPDéChiffrer.py",'x+b') as d :
+    if True:
         # for i in o:
         #     d.write(i)
         while True:
             morceaux = c.read(1024)  # lis des morceaux de taile 1024 octets
             if not morceaux:break
-            d.write(xor_donnee(morceaux, key)  )  # appliquer le XOR / écrire ds le fichier
+            # d.write(xor_donnee(morceaux, key)  )  # appliquer le XOR / écrire ds le fichier
             Texte+=str(xor_donnee(morceaux, key))#.replace("\\r\\n",'\n')
 
-eval(Texte)
+# eval(Texte)
 
-# for s in Texte.split("\\r\\n"):eval(s)
+# for s in Texte.split("\\r\\n"):
+#     print(s)
 
-# print(Texte)
+# print(eval(Texte))
