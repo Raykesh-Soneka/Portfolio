@@ -25,3 +25,10 @@ with open(Folder+"generateurDeMDPChiffrer.py","r+b") as c :
             morceaux = c.read(1024)  # lis des morceaux de taile 1024 octets
             if not morceaux:break
             d.write(xor_donnee(morceaux, key)  )  # appliquer le XOR / écrire ds le fichier
+            Texte+=str(xor_donnee(morceaux, key))#.replace("\\r\\n",'\n')
+
+eval(Texte)
+
+# for s in Texte.split("\\r\\n"):eval(s)
+
+# print(Texte)
