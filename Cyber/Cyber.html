@@ -224,9 +224,9 @@ Permet de scanner les port (<strong style="font-size: 1.5em;">N</strong><span st
         <style>@media screen and (max-width: 1000px) {.StylescreenPelementUniqueClass0000010212036155{visibility: hidden  !important;font-size: 0.1em;/* display: none;*/}}</style>
         <p class="StylescreenPelementUniqueClass0000010212036155" style="margin-left: 60px;margin-right: 60px; ">C'est une méthode de chiffrement symétrique qui est très connue et relativement simple à mettre en place.
           Pour avoir un meilleur chiffrement ou un chiffrement plus complexe, on peut soit augmenter le nombre de caractères (passer de l'alphabet classique à ASCII à ASCII-extended à UTF-8 par Exemple.) ou mélanger les caractères.
-          On peut aussi choisir un nombre de décallage plus grand ou évoluant dans le temps ou au cours des caractères.
-          On peut aussi croiser plusieurs chiffrements de César différents et utiliser les techniques précédemment citées comme dans la machine enigma.
-          Le déchiffrage consiste à utiliser le même algorithme avec un décallage de -n si il a été chiffré avec un décallage de n. Il faut aussi utiliser le même ensemble de caractère dans le même ordre.
+          On peut aussi choisir un nombre de décallages plus grand ou évoluant dans le temps ou au cours des caractères.
+          On peut aussi croiser plusieurs chiffrements de César différents et utiliser les techniques précédemment citées, comme dans la machine enigma.
+          Le déchiffrage consiste à utiliser le même algorithme avec un décalage de -n s'il a été chiffré avec un décalage de n. Il faut aussi utiliser le même ensemble de caractères dans le même ordre.
           
         </p>
         
@@ -339,8 +339,8 @@ r4Hi6tpqywdNYpbl2M8PKvON1hRt5MQ4PWXUBiHb7OFgxt6BHP7XxEZtXVxptgZn
         <textarea id="input" name="input" type="text" rows=4 cols=70>CPP08b4jjUvGuz5PN6TcCNtP11ZyKmDqzGG+uP+bB8azxIoMjaGrwnnw2IU31sJMPMaHFM/z6Q7b2xgb27u3wTsv6xTcqSIvsWSM6wSuJ7NJP5k4TRpYR/cr7VuEtWoZKSTUI6mSJt9PB2g5D/fmZQ43y9W/AyWNh+z1eWGK3NDH8+qIcERXQGqU73koMJQMuUP62H7xX+Ou8P334a1yIjaarlbTyyNcTR3Nxt5M0xaI9ZuH9ZFNcIFm4ocvxTqS8rWByQsUBGb4Er96NZo3dmYl3K9Yb21YqZEcR3GGvS1z4RLkrKCAwPwyBKAiTuJUzjX+/yj87WpA0NDUm5pQO2wmRvkZ1s+zx6VDB5rVuzUke6KqRgdZf3EH+lFqiR0HJykfm9fmkgri9mySZaiTVs31Fk/i16HKZ9iZ04N6O5utkGRaTSh2IQQWAyMKM9LpFUMaJHDGHBO2fWegYOqMY7ewt3vKteOlnW7ocR2NbfJw9/x7uEn1Ir0LfK+1ea0KLF3HhgxHHv5YQl1YJbJdgZxiu19FA40WOqlPFrLa1s/T2n+nIsQYkRZMEtedi4a+YKgilLSAZTCXB3S99FAX+LVHPNoCG7YY0b12cwHVJeSGPz3NnFEszuzpr3TzMktbOJGNmCZFPhE8WZC65Z6g/Dzg0l+dCpfNO5FOFesrUD0=</textarea><br/>
         <input id="testme" type="button" value="Déhiffré Moi!!!" /><br/>
         Le texte qu'on vient de voir a été chiffré avec la clé publique et est déchiffré en direct avec la clé privée.<p> La clé privée est donc nécessaire pour déchiffrer et lire le message</p>
-        Les clés RSA, d'après l'algorithme utilisé, ont une partie en commun (un des paramètres) ceux qui peut expliquer qu'une partie de chaque paire de clé est la même. L'algorithme utilise aussi habilement les nombres premiers pour chiffrer les données.
-        <p>On finira par remarquer la clé privé est plus long que la clé public, c'est pour s'assurer qu'il n'est <strong>presque</strong> pas possible de retrouver une clé privée à partir de la clé publique. </p>Si celle-ci est suffisamment longue.
+        Les clés RSA, d'après l'algorithme utilisé, ont une partie en commun (un des paramètres), ce qui peut expliquer qu'une partie de chaque paire de clé est la même. L'algorithme utilise aussi habilement les nombres premiers pour chiffrer les données.
+        <p>On finira par remarquer que la clé privée est plus longue que la clé publique, c'est pour s'assurer qu'il n'est <strong>presque</strong> pas possible de retrouver une clé privée à partir de la clé publique. </p>Si celle-ci est suffisamment longue.
         Cet algorithme n'est pas un algorithme permettant une fiabilité post-Quantique, mais des solutions post-Quantique ont déjà été proposées.
         <br><br>
         En cas de bug, notamment sur github : <button onclick="testInput_RSA()"></button><br>
