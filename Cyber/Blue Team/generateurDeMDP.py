@@ -36,7 +36,7 @@ if __debug and ___debug > 8:print(len(Charset))
 
 def generateurDeMotsDePasse(n : int = 0 , Charset : string = Charset ) -> string:
     while n is None or n == 0:
-        try:n=int(input(" Entrer le Nombre de caractère (longueur) pour génèré un mots de passe : "))
+        try:n=int(input(" Entrer le Nombre de caractères (longueur) pour générer un mot de passe : "))
         except ValueError as v:print("ValueError",v," Mettre seuelement un entier")
     # MDP : string = ""
     # for i in range(n):MDP += secrets.choice(Charset)
