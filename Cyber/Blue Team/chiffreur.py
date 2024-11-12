@@ -27,13 +27,15 @@ with open(Folder+"generateurDeMDPChiffrer.py","r+b") as c :
             if not morceaux:break
             d.write(xor_donnee(morceaux, key)  )  # appliquer le XOR / écrire ds le fichier
             Texte+=str(xor_donnee(morceaux, key))#.replace("\\r\\n",'\n')
-    import generateurDeMDPDéChiffrer,os # type: ignore
+    import generateurDeMDPDéChiffrer,os,shutil # type: ignore
     try:
         os.remove("generateurDeMDPDéChiffrer.py")
-        os.rmdir("__pycache__")
+        shutil.rmtree("__pycache__")
+        # os.rmdir("__pycache__") #Le répertoire n’est pas vide
     except:
         os.remove("Cyber\Blue Team\generateurDeMDPDéChiffrer.py")
-        os.rmdir("Cyber\Blue Team\__pycache__")
+        shutil.rmtree("Cyber\Blue Team\__pycache__")
+        # os.rmdir("Cyber\Blue Team\__pycache__") #Le répertoire n’est pas vide
 
 # eval(Texte)
 
