@@ -14,6 +14,8 @@ Page Principale
 - Le Main contient les informations du site et les liens vers les autres pages du site.
 - Le Footer contient les informations de contact, les liens vers les réseaux sociaux et les autre pages du site
 
+Pages Cyber 
+-Caché / Sécurité par Obfuscation
 
 > [!NOTE]
 > Cette partie n'est sûrement pas encore MAJ.
