@@ -73,7 +73,7 @@ console.log( page );   // Affiche le nom de la page actuelle dans la console
 
 ### Déploiment
 
-Le Déploiment est un déploiment standard sur GitHub avec GitHub Pages suivi d'une redirection d'URL automatique grâce à `window.location.replace("")`.
+Le Déploiement est un déploiement standard sur GitHub avec GitHub Pages suivi d'une redirection d'URL automatique grâce à `window.location.replace("")`.
 
 <details>
 <summary>:eyes: Montrer les Statistiques GitHub de Raykesh : </summary>
