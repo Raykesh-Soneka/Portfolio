@@ -30,12 +30,14 @@ with open(Folder+"generateurDeMDPChiffrer.py","r+b") as c :
     import generateurDeMDPDéChiffrer,os,shutil # type: ignore
     try:
         os.remove("generateurDeMDPDéChiffrer.py")
-        shutil.rmtree("__pycache__")
-        # os.rmdir("__pycache__") #Le répertoire n’est pas vide
+        # shutil.rmtree("__pycache__")
+        os.remove("__pycache__\generateurDeMDPDéChiffrer.cpython-312.pyc")
+        os.rmdir("__pycache__") #Le répertoire n’est pas vide
     except:
         os.remove("Cyber\Blue Team\generateurDeMDPDéChiffrer.py")
-        shutil.rmtree("Cyber\Blue Team\__pycache__")
-        # os.rmdir("Cyber\Blue Team\__pycache__") #Le répertoire n’est pas vide
+        # shutil.rmtree("Cyber\Blue Team\__pycache__")
+        os.remove("Cyber\Blue Team\__pycache__\generateurDeMDPDéChiffrer.cpython-312.pyc") #Le répertoire n’est pas vide
+        os.rmdir("Cyber\Blue Team\__pycache__") #Le répertoire n’est pas vide
 
 # eval(Texte)
 
