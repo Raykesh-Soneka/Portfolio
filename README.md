@@ -12,7 +12,7 @@ Page Principale
 - Le site est composé de 3 sections : Header, Main et Footer.
 - Le Header contient le logo du site et un bouton de navigation vers la page principale
 - Le Main contient les informations du site et les liens vers les autres pages du site.
-- Le Footer contient les informations de contact, les liens vers les réseaux sociaux et les autre pages du site
+- Le Footer contient les informations de contact, les liens vers les réseaux sociaux et les autres pages du site
 
 Pages Cyber 
 -Caché / Sécurité par Obfuscation
