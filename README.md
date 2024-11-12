@@ -46,7 +46,7 @@ Le code à aussi des raccourcis
 
 ### CSS [![My Skills](https://skillicons.dev/icons?i=css)](https://skillicons.dev)
 
-Le CSS est dans un fichier à part et dispose d'une partie réactive. Le `z-index` permet de corriger le bug de l'element nav qui passe en dessous de l'image.
+Le CSS est dans un fichier à part et dispose d'une partie réactive. Le `z-index` permet de corriger le bug de l'élément nav qui passe en dessous de l'image.
 ```CSS
 @import '../style.css';  
 /* Style css de base ↑ */
