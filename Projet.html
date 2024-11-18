@@ -135,6 +135,21 @@
             color: #fff;
         }
     }
+    #Zoom {
+        background-image: url(./images/MDPGenerer.png);
+        width: 2900000px;
+        height: 20px;
+        margin-left: 5px;
+        animation: scrollHorizon 10000s infinite linear;
+    }
+    @keyframes scrollHorizon {
+        from {
+            transform: translateX(0%);
+        }
+        to {
+            transform: translateX(-30%);
+        }
+    }
 </style>
 <body>
     <div class="container">
@@ -239,6 +254,9 @@
             <div class="face projet">
                 <div class="contenu">
                     <img src="./images/MDPGenerer.png" style="max-width: 290px;">
+                    <div class="bloc">
+                        <div id="Zoom"></div>
+                    </div>
                     <h3>Générateur de Mots de passe</h3>
                     <h5>★★★★</h5>
                 </div>
